@@ -1,338 +1,338 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" >
   <url>
-    <loc>https://gitlab.models.nasdanika.org/classifiers.html</loc>
-    <lastmod>2023-08-21T10:42:17.097-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/classifiers.html</loc>
+    <lastmod>2023-08-21T11:49:58.391-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/glossary.html</loc>
-    <lastmod>2023-08-21T10:42:17.111-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/glossary.html</loc>
+    <lastmod>2023-08-21T11:49:58.398-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/index.html</loc>
-    <lastmod>2023-08-21T10:42:16.857-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/index.html</loc>
+    <lastmod>2023-08-21T11:49:58.164-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Connection/attributes.html</loc>
-    <lastmod>2023-08-21T10:42:16.864-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Connection/attributes.html</loc>
+    <lastmod>2023-08-21T11:49:58.177-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Connection/diagram.html</loc>
-    <lastmod>2023-08-21T10:42:16.871-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Connection/diagram.html</loc>
+    <lastmod>2023-08-21T11:49:58.195-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Connection/index.html</loc>
-    <lastmod>2023-08-21T10:42:16.861-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Connection/index.html</loc>
+    <lastmod>2023-08-21T11:49:58.171-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Connection/inheritance.html</loc>
-    <lastmod>2023-08-21T10:42:16.867-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Connection/inheritance.html</loc>
+    <lastmod>2023-08-21T11:49:58.186-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Connection/load-specification.html</loc>
-    <lastmod>2023-08-21T10:42:16.874-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Connection/load-specification.html</loc>
+    <lastmod>2023-08-21T11:49:58.198-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Connection/references.html</loc>
-    <lastmod>2023-08-21T10:42:16.869-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Connection/references.html</loc>
+    <lastmod>2023-08-21T11:49:58.192-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Document/attributes.html</loc>
-    <lastmod>2023-08-21T10:42:16.881-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Document/attributes.html</loc>
+    <lastmod>2023-08-21T11:49:58.206-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Document/diagram.html</loc>
-    <lastmod>2023-08-21T10:42:16.895-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Document/diagram.html</loc>
+    <lastmod>2023-08-21T11:49:58.223-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Document/index.html</loc>
-    <lastmod>2023-08-21T10:42:16.878-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Document/index.html</loc>
+    <lastmod>2023-08-21T11:49:58.202-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Document/inheritance.html</loc>
-    <lastmod>2023-08-21T10:42:16.887-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Document/inheritance.html</loc>
+    <lastmod>2023-08-21T11:49:58.211-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Document/load-specification.html</loc>
-    <lastmod>2023-08-21T10:42:16.900-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Document/load-specification.html</loc>
+    <lastmod>2023-08-21T11:49:58.226-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Document/references.html</loc>
-    <lastmod>2023-08-21T10:42:16.893-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Document/references.html</loc>
+    <lastmod>2023-08-21T11:49:58.219-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Geometry/attributes.html</loc>
-    <lastmod>2023-08-21T10:42:16.909-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Geometry/attributes.html</loc>
+    <lastmod>2023-08-21T11:49:58.235-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Geometry/diagram.html</loc>
-    <lastmod>2023-08-21T10:42:16.923-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Geometry/diagram.html</loc>
+    <lastmod>2023-08-21T11:49:58.248-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Geometry/index.html</loc>
-    <lastmod>2023-08-21T10:42:16.905-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Geometry/index.html</loc>
+    <lastmod>2023-08-21T11:49:58.230-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Geometry/inheritance.html</loc>
-    <lastmod>2023-08-21T10:42:16.912-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Geometry/inheritance.html</loc>
+    <lastmod>2023-08-21T11:49:58.237-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Geometry/load-specification.html</loc>
-    <lastmod>2023-08-21T10:42:16.935-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Geometry/load-specification.html</loc>
+    <lastmod>2023-08-21T11:49:58.251-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Geometry/references.html</loc>
-    <lastmod>2023-08-21T10:42:16.915-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Geometry/references.html</loc>
+    <lastmod>2023-08-21T11:49:58.244-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Layer/attributes.html</loc>
-    <lastmod>2023-08-21T10:42:16.941-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Layer/attributes.html</loc>
+    <lastmod>2023-08-21T11:49:58.258-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Layer/diagram.html</loc>
-    <lastmod>2023-08-21T10:42:16.955-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Layer/diagram.html</loc>
+    <lastmod>2023-08-21T11:49:58.264-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Layer/index.html</loc>
-    <lastmod>2023-08-21T10:42:16.938-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Layer/index.html</loc>
+    <lastmod>2023-08-21T11:49:58.255-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Layer/inheritance.html</loc>
-    <lastmod>2023-08-21T10:42:16.944-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Layer/inheritance.html</loc>
+    <lastmod>2023-08-21T11:49:58.260-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Layer/load-specification.html</loc>
-    <lastmod>2023-08-21T10:42:16.957-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Layer/load-specification.html</loc>
+    <lastmod>2023-08-21T11:49:58.267-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Layer/references.html</loc>
-    <lastmod>2023-08-21T10:42:16.946-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Layer/references.html</loc>
+    <lastmod>2023-08-21T11:49:58.262-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/LayerElement/attributes.html</loc>
-    <lastmod>2023-08-21T10:42:16.975-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/LayerElement/attributes.html</loc>
+    <lastmod>2023-08-21T11:49:58.277-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/LayerElement/diagram.html</loc>
-    <lastmod>2023-08-21T10:42:16.993-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/LayerElement/diagram.html</loc>
+    <lastmod>2023-08-21T11:49:58.284-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/LayerElement/index.html</loc>
-    <lastmod>2023-08-21T10:42:16.973-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/LayerElement/index.html</loc>
+    <lastmod>2023-08-21T11:49:58.271-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/LayerElement/inheritance.html</loc>
-    <lastmod>2023-08-21T10:42:16.977-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/LayerElement/inheritance.html</loc>
+    <lastmod>2023-08-21T11:49:58.280-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/LayerElement/load-specification.html</loc>
-    <lastmod>2023-08-21T10:42:16.995-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/LayerElement/load-specification.html</loc>
+    <lastmod>2023-08-21T11:49:58.288-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/LayerElement/references.html</loc>
-    <lastmod>2023-08-21T10:42:16.991-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/LayerElement/references.html</loc>
+    <lastmod>2023-08-21T11:49:58.282-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Model/diagram.html</loc>
-    <lastmod>2023-08-21T10:42:17.006-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Model/diagram.html</loc>
+    <lastmod>2023-08-21T11:49:58.301-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Model/index.html</loc>
-    <lastmod>2023-08-21T10:42:16.998-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Model/index.html</loc>
+    <lastmod>2023-08-21T11:49:58.292-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Model/inheritance.html</loc>
-    <lastmod>2023-08-21T10:42:17.001-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Model/inheritance.html</loc>
+    <lastmod>2023-08-21T11:49:58.294-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Model/load-specification.html</loc>
-    <lastmod>2023-08-21T10:42:17.009-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Model/load-specification.html</loc>
+    <lastmod>2023-08-21T11:49:58.305-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Model/references.html</loc>
-    <lastmod>2023-08-21T10:42:17.003-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Model/references.html</loc>
+    <lastmod>2023-08-21T11:49:58.296-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/ModelElement/attributes.html</loc>
-    <lastmod>2023-08-21T10:42:17.013-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/ModelElement/attributes.html</loc>
+    <lastmod>2023-08-21T11:49:58.314-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/ModelElement/diagram.html</loc>
-    <lastmod>2023-08-21T10:42:17.024-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/ModelElement/diagram.html</loc>
+    <lastmod>2023-08-21T11:49:58.329-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/ModelElement/index.html</loc>
-    <lastmod>2023-08-21T10:42:17.011-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/ModelElement/index.html</loc>
+    <lastmod>2023-08-21T11:49:58.311-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/ModelElement/inheritance.html</loc>
-    <lastmod>2023-08-21T10:42:17.018-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/ModelElement/inheritance.html</loc>
+    <lastmod>2023-08-21T11:49:58.318-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/ModelElement/references.html</loc>
-    <lastmod>2023-08-21T10:42:17.020-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/ModelElement/references.html</loc>
+    <lastmod>2023-08-21T11:49:58.325-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Node/attributes.html</loc>
-    <lastmod>2023-08-21T10:42:17.031-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Node/attributes.html</loc>
+    <lastmod>2023-08-21T11:49:58.335-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Node/diagram.html</loc>
-    <lastmod>2023-08-21T10:42:17.040-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Node/diagram.html</loc>
+    <lastmod>2023-08-21T11:49:58.344-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Node/index.html</loc>
-    <lastmod>2023-08-21T10:42:17.026-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Node/index.html</loc>
+    <lastmod>2023-08-21T11:49:58.333-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Node/inheritance.html</loc>
-    <lastmod>2023-08-21T10:42:17.033-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Node/inheritance.html</loc>
+    <lastmod>2023-08-21T11:49:58.337-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Node/load-specification.html</loc>
-    <lastmod>2023-08-21T10:42:17.042-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Node/load-specification.html</loc>
+    <lastmod>2023-08-21T11:49:58.345-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Node/references.html</loc>
-    <lastmod>2023-08-21T10:42:17.037-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Node/references.html</loc>
+    <lastmod>2023-08-21T11:49:58.342-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Page/attributes.html</loc>
-    <lastmod>2023-08-21T10:42:17.048-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Page/attributes.html</loc>
+    <lastmod>2023-08-21T11:49:58.350-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Page/diagram.html</loc>
-    <lastmod>2023-08-21T10:42:17.061-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Page/diagram.html</loc>
+    <lastmod>2023-08-21T11:49:58.358-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Page/index.html</loc>
-    <lastmod>2023-08-21T10:42:17.046-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Page/index.html</loc>
+    <lastmod>2023-08-21T11:49:58.349-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Page/inheritance.html</loc>
-    <lastmod>2023-08-21T10:42:17.050-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Page/inheritance.html</loc>
+    <lastmod>2023-08-21T11:49:58.351-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Page/load-specification.html</loc>
-    <lastmod>2023-08-21T10:42:17.063-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Page/load-specification.html</loc>
+    <lastmod>2023-08-21T11:49:58.361-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Page/references.html</loc>
-    <lastmod>2023-08-21T10:42:17.056-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Page/references.html</loc>
+    <lastmod>2023-08-21T11:49:58.353-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Point/attributes.html</loc>
-    <lastmod>2023-08-21T10:42:17.072-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Point/attributes.html</loc>
+    <lastmod>2023-08-21T11:49:58.367-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Point/diagram.html</loc>
-    <lastmod>2023-08-21T10:42:17.076-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Point/diagram.html</loc>
+    <lastmod>2023-08-21T11:49:58.371-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Point/index.html</loc>
-    <lastmod>2023-08-21T10:42:17.069-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Point/index.html</loc>
+    <lastmod>2023-08-21T11:49:58.365-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Point/inheritance.html</loc>
-    <lastmod>2023-08-21T10:42:17.074-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Point/inheritance.html</loc>
+    <lastmod>2023-08-21T11:49:58.369-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Point/load-specification.html</loc>
-    <lastmod>2023-08-21T10:42:17.079-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Point/load-specification.html</loc>
+    <lastmod>2023-08-21T11:49:58.373-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Root/attributes.html</loc>
-    <lastmod>2023-08-21T10:42:17.084-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Root/attributes.html</loc>
+    <lastmod>2023-08-21T11:49:58.378-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Root/diagram.html</loc>
-    <lastmod>2023-08-21T10:42:17.090-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Root/diagram.html</loc>
+    <lastmod>2023-08-21T11:49:58.385-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Root/index.html</loc>
-    <lastmod>2023-08-21T10:42:17.082-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Root/index.html</loc>
+    <lastmod>2023-08-21T11:49:58.376-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Root/inheritance.html</loc>
-    <lastmod>2023-08-21T10:42:17.086-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Root/inheritance.html</loc>
+    <lastmod>2023-08-21T11:49:58.380-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Root/load-specification.html</loc>
-    <lastmod>2023-08-21T10:42:17.093-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Root/load-specification.html</loc>
+    <lastmod>2023-08-21T11:49:58.388-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/references/eClassifiers/Root/references.html</loc>
-    <lastmod>2023-08-21T10:42:17.088-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Root/references.html</loc>
+    <lastmod>2023-08-21T11:49:58.383-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://gitlab.models.nasdanika.org/search.html</loc>
-    <lastmod>2023-08-21T10:42:17.107-04:00</lastmod>
+    <loc>https://drawio.models.nasdanika.org/search.html</loc>
+    <lastmod>2023-08-21T11:49:58.394-04:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
