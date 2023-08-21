@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="EN">
+  <head>
+    <title>Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/css/app.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/themes/default/style.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.1.0/github-markdown.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/dark-head.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/jstree.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/components/table.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/components/table.js"></script><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9BRJVLK8CC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9BRJVLK8CC');
+</script>    
+</head>
+  <body>
+    <div class="container-fluid nsd-app-container">
+      <div class="row">
+        <div class="col nsd-app-header">
+          <a href="https://github.com/Nasdanika-Models" data-nsd-label-uuid="34df7e3e-a690-4fbf-bfd8-bad7338f0290" class="nsd-app-header-title">
+            <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon"/>Nasdanika Models</a>
+          <ul class="nav nsd-app-header-navs">
+            <li class="nav-item"><span data-nsd-label-uuid="164a8c8c-181b-470c-8a31-cfb4a145dcda" class="navbar-text"><span class="fas fa-search nsd-app-label-icon"></span>Search</span>
+            </li>
+            <li class="nav-item">
+              <a href="glossary.html" data-nsd-label-uuid="cdff0d13-eab9-4e27-8ffd-b33f50926b24" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nsd-app-navbar">
+          <ul class="navbar navbar-light navbar-expand-lg">
+            <a href="index.html" data-nsd-label-uuid="49de9778-1647-4663-9296-464cb22fbc59" class="navbar-brand">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EPackage.gif" class="nsd-app-label-icon"/>model</a>
+            <button type="button" data-toggle="collapse" data-target="#nsd_4z" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="nsd_4z" class="collapse navbar-collapse">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a href="classifiers.html" data-nsd-label-uuid="1a7d4a68-fbd5-4401-bcc4-47947d8f544f" class="nav-link">Classifiers</a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <div class="row nsd-app-content-row">
+        <div class="col nsd-app-navigation-panel">
+          <div class="list-group list-group-flush">
+            <a href="references/eClassifiers/Connection/index.html" data-nsd-label-uuid="a32f6362-f1c0-45d3-aa10-452af623cb90" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"/>Connection</a>
+            <a href="references/eClassifiers/Document/index.html" data-nsd-label-uuid="64334b9b-03ef-4193-8e1f-9c180a910f2f" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"/>Document</a>
+            <a href="references/eClassifiers/Geometry/index.html" data-nsd-label-uuid="9a77b693-556f-4dea-949e-d5f917d3d384" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"/>Geometry</a>
+            <a href="references/eClassifiers/Layer/index.html" data-nsd-label-uuid="ea1a81b5-57da-4d3e-824d-888ebb303a92" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"/>Layer</a>
+            <a href="references/eClassifiers/LayerElement/index.html" data-nsd-label-uuid="aa0c14a6-c55a-4c79-823a-0a95d45e3bde" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"/>LayerElement</a>
+            <a href="references/eClassifiers/Model/index.html" data-nsd-label-uuid="3b285fcf-671a-48bf-bceb-1c5b180991f2" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"/>Model</a>
+            <a href="references/eClassifiers/ModelElement/index.html" data-nsd-label-uuid="3e2af645-e770-40db-85b6-2c4d9ac48002" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"/><i>ModelElement</i></a>
+            <a href="references/eClassifiers/Node/index.html" data-nsd-label-uuid="1af930dc-3ce6-4a75-b9e7-8a8ddf12193a" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"/>Node</a>
+            <a href="references/eClassifiers/Page/index.html" data-nsd-label-uuid="9001604e-0745-47fe-b223-c6947a83f943" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"/>Page</a>
+            <a href="references/eClassifiers/Point/index.html" data-nsd-label-uuid="c1713c4e-5b19-45d8-8fa1-091a8cdb331b" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"/>Point</a>
+            <a href="references/eClassifiers/Root/index.html" data-nsd-label-uuid="0ad99414-882f-4a22-a505-7a73ac0bac80" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"/>Root</a>
+          </div>
+        </div>
+        <div data-nsd-label-uuid="164a8c8c-181b-470c-8a31-cfb4a145dcda" data-nsd-action-uris="uuid:164a8c8c-181b-470c-8a31-cfb4a145dcda" class="col nsd-app-content-panel">
+          <div class="container-fluid">
+            <div class="row nsd-app-content-panel-title-and-items-row">
+              <div class="col-auto">
+                <H1><span data-nsd-label-uuid="164a8c8c-181b-470c-8a31-cfb4a145dcda" class="nsd-app-content-panel-title"><span class="fas fa-search nsd-app-label-icon"></span>Search</span>
+                </H1>
+              </div>
+            </div>
+            <div class="row nsd-app-content-panel-content-row">
+              <div class="col">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col">		<script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>     
+		<script src="search-documents.js"></script>     
+     	<div id="search-app" class="container-fluid">
+     		<div class="row">
+     			<div class="col">
+					<b-form-group
+			          label="Filter"
+			          label-for="filter-input"
+			          label-cols-sm="3"
+			          label-align-sm="right"
+			          label-size="sm"
+			          class="mb-0"
+					  description="You can use wildcards, e.g. 'foo*' or 'f*o'; title or content fields, e.g. 'title:foo* bar'; boosts, e.g. 'foo^10 bar'; fuzzy matches, e.g. 'foo~1'; and term presence, e.g. '+foo bar -baz'"	          
+			        >
+			          <b-input-group size="sm">
+			            <b-form-input
+			              id="filter-input"
+			              v-model="filter"
+			              type="search"
+			              placeholder="Type to Search"
+			              debounce="700"
+			            ></b-form-input>
+			
+			            <b-input-group-append>
+			              <b-button :disabled="!filter" @click="filter = ''">Clear</b-button>
+			            </b-input-group-append>
+			          </b-input-group>
+			        </b-form-group>		
+     			</div>     		
+     		</div>
+	        
+	        <div class="row flex-nowrap">
+	        	<div class="col-auto border-right border-secondary pb-1">
+	        		<div id="nsd-site-map-tree">
+	        		</div>
+	        	</div>
+	        	<div class="col">
+			        <b-card 
+			        	v-for="searchResult in searchResults" 
+			        	:header-html="searchResult.title" 
+			        	:footer="searchResult.path"
+			        	class="my-1"
+			        	>
+			        	
+			        	<b-card-text><span v-html="searchResult.content"></span></b-card-text>
+			        </b-card>
+	        	</div>
+	        </div>	        
+     	</div>
+     
+		<script>		      
+			new Vue({
+				  el: '#search-app',
+				  data: {
+			        	filter: null,
+				      searchIndex : lunr(function () {
+						  this.ref('url');
+						  this.field('title');
+						  this.field('content');
+						  this.metadataWhitelist = ['position'];
+	
+						  for (const key in searchDocuments) {
+							  let doc = searchDocuments[key];
+							this.add({
+								url: key,
+								title: doc.title,
+								path: doc.path,
+								content: doc.content
+							});  
+						  }
+						})
+				  },				  
+				  computed: {
+					searchResults: function() {
+						if (this.filter) {
+							let searchResult = this.searchIndex.search(this.filter);
+							let actionUuids = searchResult.map(match => searchDocuments[match.ref]['action-uuid']).join(" ");
+							setTimeout(() => {
+								let treeSearchCallback = $('#nsd-site-map-tree').jstree(true).search;
+								if (treeSearchCallback) {
+									$('#nsd-site-map-tree').jstree(true).search(actionUuids);								
+								}
+							});
+							
+							return searchResult.map(function(e) {
+								let doc = searchDocuments[e.ref];
+								let titleMatches = [];
+								let contentMatches = [];
+								let matchMetaData = e.matchData.metadata;
+								for (const term in matchMetaData) {
+									if (matchMetaData[term]['title']) {
+										let positions = matchMetaData[term]['title'].position;
+										for (const match in positions) {
+											titleMatches.push(positions[match]);
+										}										
+									}
+									if (matchMetaData[term]['content']) {
+										let positions = matchMetaData[term]['content'].position;
+										for (const match in positions) {
+											contentMatches.push(positions[match]);
+										}										
+									}
+								}
+								
+								// Title highlighting
+								titleMatches.sort(function (a, b) { return a[0] - b[0] });
+								let titleElements = [];
+								let idx = 0;
+								for (const matchIdx in titleMatches) {
+									let match = titleMatches[matchIdx];
+									if (match[0] > idx) {
+										titleElements.push(doc.title.substring(idx, match[0]));
+									}
+									idx =  match[0] + match[1];
+									titleElements.push(`<span class='nsd-mark'>${doc.title.substring(match[0], idx)}</span>`);
+								}
+								if (idx < doc.title.length - 1) {
+									titleElements.push(doc.title.substring(idx, doc.title.length));
+								}
+								
+								// Content ellipsing and highlighting
+								contentMatches.sort(function (a, b) { return a[0] - b[0] });
+								let contentElements = [];
+								let snippetLength = 10;
+								idx = 0;
+								for (const matchIdx in contentMatches) {
+									let match = contentMatches[matchIdx];
+									if (match[0] > idx) {
+										let words = doc.content.substring(idx, match[0]).split(' ');
+										let snippetedWords = [];
+										if (idx == 0) {
+											if (words.length <= snippetLength) {
+												snippetedWords = words;
+											} else {
+												snippetedWords.push("&hellip;");
+												words.slice(words.length - snippetLength, words.length).forEach(e => snippetedWords.push(e));
+											}
+										} else {
+											if (words.length <= snippetLength * 2) {
+												snippetedWords = words;
+											} else {
+												words.slice(0, snippetLength).forEach(e => snippetedWords.push(e));
+												snippetedWords.push("&hellip;");
+												words.slice(words.length - snippetLength, words.length).forEach(e => snippetedWords.push(e));
+											}
+											
+										}
+										contentElements.push(snippetedWords.join(' '));
+									}
+									idx =  match[0] + match[1];
+									contentElements.push(`<span class='nsd-mark'>${doc.content.substring(match[0], idx)}</span>`);
+								}
+								if (idx < doc.content.length - 1) {
+									let words = doc.content.substring(idx, doc.content.length).split(' ');
+									if (idx == 0) {
+										if (words.length < snippetLength * 2) {
+											contentElements.push(doc.content);
+										} else {
+											let snippetedWords = [];
+											words.slice(0, snippetLength * 2).forEach(e => snippetedWords.push(e));
+											snippetedWords.push("&hellip;");
+											contentElements.push(snippetedWords.join(' '));
+										}
+									} else {
+										let snippetedWords = [];
+										if (words.length <= snippetLength) {
+											snippetedWords = words;
+										} else {
+											words.slice(0, snippetLength).forEach(e => snippetedWords.push(e));
+											snippetedWords.push("&hellip;");
+										}
+										contentElements.push(snippetedWords.join(' '));
+									}
+								}
+								return {
+									title: `<h5><a href="${e.ref}">${titleElements.join('')}</a></h5>`,
+									path: doc.path,
+									content: contentElements.join('')
+								};									
+							});
+						} 
+						setTimeout(() => {
+							let treeSearchCallback = $('#nsd-site-map-tree').jstree(true).search;
+							if (treeSearchCallback) {
+								$('#nsd-site-map-tree').jstree(true).search('');								
+							}
+						});
+						return [];
+					}  
+				  }
+			});   			
+		</script>
+		
+
+<script>$(document).ready( function() {
+$('#nsd-site-map-tree').jstree(function(tree) { tree.state.filter = function(state) { delete state.core.selected; return state; }; tree.search.search_callback = (results, node) => results.split(' ').includes(node.original['data-nsd-label-uuid']); return tree; }({"core":{"data":[{"a_attr":{"onclick":"window.location='https://github.com/Nasdanika-Models';"},"children":[{"children":[{"data-nsd-label-uuid":"164a8c8c-181b-470c-8a31-cfb4a145dcda","icon":"fas fa-search","id":"dba86c47-7157-4667-a5b9-66f11448c2c6","text":"Search","type":"leaf"},{"a_attr":{"onclick":"window.location='glossary.html';"},"data-nsd-label-uuid":"cdff0d13-eab9-4e27-8ffd-b33f50926b24","icon":"fas fa-book","id":"61ebc1fa-57e5-48ad-9df7-87eb41f17bf2","text":"Glossary","type":"leaf"}],"text":"Children"}],"data-nsd-label-uuid":"34df7e3e-a690-4fbf-bfd8-bad7338f0290","icon":"https://docs.nasdanika.org/images/nasdanika-logo.png","id":"dd21c5d8-20d5-4d88-804f-96172da6bd3f","text":"Nasdanika Models","type":"leaf"},{"a_attr":{"onclick":"window.location='index.html';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Connection/index.html';"},"data-nsd-label-uuid":"a32f6362-f1c0-45d3-aa10-452af623cb90","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"2f67197b-c1ce-4e78-989f-183625966fc6","text":"Connection","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Document/index.html';"},"data-nsd-label-uuid":"64334b9b-03ef-4193-8e1f-9c180a910f2f","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"ef8da240-f953-44ca-a978-44dd247c188b","text":"Document","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Geometry/index.html';"},"data-nsd-label-uuid":"9a77b693-556f-4dea-949e-d5f917d3d384","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"f2cb4e14-67bc-4e50-bd98-64d7fb7a3a5f","text":"Geometry","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Layer/index.html';"},"data-nsd-label-uuid":"ea1a81b5-57da-4d3e-824d-888ebb303a92","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"f8f3cb09-589b-4820-a348-db01a58aeaf8","text":"Layer","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/LayerElement/index.html';"},"data-nsd-label-uuid":"aa0c14a6-c55a-4c79-823a-0a95d45e3bde","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"e5dfbf62-64ad-4328-9d10-0791341f4f23","text":"LayerElement","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Model/index.html';"},"data-nsd-label-uuid":"3b285fcf-671a-48bf-bceb-1c5b180991f2","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"3a4ac1be-6820-4e96-aaaf-c27297596611","text":"Model","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/ModelElement/index.html';"},"data-nsd-label-uuid":"3e2af645-e770-40db-85b6-2c4d9ac48002","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"3337ea9f-8f0a-4527-ab98-6dc552334295","text":"<i>ModelElement<\/i>","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Node/index.html';"},"data-nsd-label-uuid":"1af930dc-3ce6-4a75-b9e7-8a8ddf12193a","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"193cd4d3-c482-4205-8324-65f43427f81e","text":"Node","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Page/index.html';"},"data-nsd-label-uuid":"9001604e-0745-47fe-b223-c6947a83f943","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"3946ea17-d200-483f-adf4-423fe051cacb","text":"Page","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Point/index.html';"},"data-nsd-label-uuid":"c1713c4e-5b19-45d8-8fa1-091a8cdb331b","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"1a17d11c-cdba-47fd-bf57-5a6f9cff0830","text":"Point","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Root/index.html';"},"data-nsd-label-uuid":"0ad99414-882f-4a22-a505-7a73ac0bac80","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"ca6963d3-ed1e-4d6b-a65d-adb36a3b0c80","text":"Root","type":"leaf"}],"text":"E classifiers"}],"data-nsd-label-uuid":"49de9778-1647-4663-9296-464cb22fbc59","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EPackage.gif","id":"68663bd3-6034-44cc-9799-1091a0fe4a4b","text":"model","type":"leaf"},{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Connection/attributes.html';"},"data-nsd-label-uuid":"7bd1abf2-c31c-4aca-8dc9-54b799a7064a","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","id":"87b6cce8-22ed-4007-88ab-19da261fa38a","text":"Attributes","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Connection/inheritance.html';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Connection/inheritance.html#uuid-9290070a-ca06-4536-a762-c3d36b940979';"},"data-nsd-label-uuid":"9290070a-ca06-4536-a762-c3d36b940979","id":"843e759b-0fc7-4f84-b38f-7f8d660007bb","text":"Supertypes","type":"leaf"}],"text":"Sections"}],"data-nsd-label-uuid":"a66993ec-f698-42cf-b00f-ca5bc83b1030","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","id":"1a3ac43a-5ccd-4d42-8150-ddcfc4bd557f","text":"Inheritance","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Connection/references.html';"},"data-nsd-label-uuid":"505bfb01-1271-4223-84fe-0410329a8107","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","id":"e475a92f-0f6e-4f02-8877-920943cc6510","text":"References","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Connection/diagram.html';"},"data-nsd-label-uuid":"8a3feff1-4613-44c4-83ee-7d5013150ae3","icon":"fas fa-project-diagram","id":"047bdd55-e2c5-4e13-a388-a34b761c8e21","text":"Diagram","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Connection/load-specification.html';"},"data-nsd-label-uuid":"42340e63-e55b-4eee-9665-52d7115890d3","id":"a360d1db-1b8f-42c5-b0f4-088fe5dc00fd","text":"Load specification","type":"leaf"}],"text":"Navigation"},{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Document/attributes.html';"},"data-nsd-label-uuid":"bc5131a6-479c-49ba-9cc1-85ab32b957f1","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","id":"5dbf3c51-8141-40b4-8a43-ada932272163","text":"Attributes","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Document/inheritance.html';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Document/inheritance.html#uuid-ae047901-43f0-406d-9a88-fc993965b5ea';"},"data-nsd-label-uuid":"ae047901-43f0-406d-9a88-fc993965b5ea","id":"b49a74f7-c015-4277-a644-bf7c1eab8e87","text":"Supertypes","type":"leaf"}],"text":"Sections"}],"data-nsd-label-uuid":"5f063870-e366-4062-8154-afb520e89182","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","id":"73d5f89c-8618-465c-bf71-11b598e3755c","text":"Inheritance","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Document/references.html';"},"data-nsd-label-uuid":"fa5ed223-6923-4467-81e3-8e91ff539e22","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","id":"768186f0-a9f6-4702-ad2c-e0b3723d688f","text":"References","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Document/diagram.html';"},"data-nsd-label-uuid":"5b62a901-cb3c-484a-b9a5-2a7d41d3d853","icon":"fas fa-project-diagram","id":"635a2c4d-b3d2-429f-bdb5-02cf7269aa02","text":"Diagram","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Document/load-specification.html';"},"data-nsd-label-uuid":"42f48c37-c324-4e13-b8eb-a52571a8ef84","id":"4174f8a3-df95-4d4d-9084-539d5bfcb574","text":"Load specification","type":"leaf"}],"text":"Navigation"},{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Geometry/attributes.html';"},"data-nsd-label-uuid":"008c1e81-06b5-4f89-8ae6-001e11885b0d","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","id":"6cdc5c9e-0a49-4f15-a004-c97e3174d67a","text":"Attributes","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Geometry/inheritance.html';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Geometry/inheritance.html#uuid-d809d46c-ea5e-4d3d-89f5-40b335afa482';"},"data-nsd-label-uuid":"d809d46c-ea5e-4d3d-89f5-40b335afa482","id":"fe63e2f9-4cb2-45c8-a9c3-26ff57597beb","text":"Supertypes","type":"leaf"}],"text":"Sections"}],"data-nsd-label-uuid":"6e89d987-76ef-4a6d-b998-b0253c7da21a","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","id":"1b6ea0fc-94c2-4660-a9ac-4c71c5b43a9e","text":"Inheritance","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Geometry/references.html';"},"data-nsd-label-uuid":"168f9f57-0c62-4edc-8efb-181af1c5bb3e","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","id":"54efc445-bf6b-4ee8-a35a-92ba9faf7828","text":"References","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Geometry/diagram.html';"},"data-nsd-label-uuid":"9c69b8fe-78a8-4b68-92f8-12b4b8df59fb","icon":"fas fa-project-diagram","id":"076297e1-e1a5-4b07-aeb4-141517ee6c5b","text":"Diagram","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Geometry/load-specification.html';"},"data-nsd-label-uuid":"221c9ee3-4f14-465c-a6ce-22993acf7588","id":"820dd5a4-2c68-4b7a-af11-d7e0e1375c7c","text":"Load specification","type":"leaf"}],"text":"Navigation"},{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Layer/attributes.html';"},"data-nsd-label-uuid":"489d30f4-b322-41f6-98c2-30a182bc04f6","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","id":"17af15a1-a8cc-4078-97bb-35897a10eab2","text":"Attributes","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Layer/inheritance.html';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Layer/inheritance.html#uuid-1a6ed17b-5aba-411d-87ac-d6ef348486a8';"},"data-nsd-label-uuid":"1a6ed17b-5aba-411d-87ac-d6ef348486a8","id":"2fc67ab9-ebf5-4ab5-819f-92acfc3a8968","text":"Supertypes","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Layer/inheritance.html#uuid-914ce4fb-7b5c-40da-9a02-c6d33cad1c4d';"},"data-nsd-label-uuid":"914ce4fb-7b5c-40da-9a02-c6d33cad1c4d","id":"baa0b053-414f-4117-aad0-95cfa796f3e9","text":"Subtypes","type":"leaf"}],"text":"Sections"}],"data-nsd-label-uuid":"2cbf16d1-8d97-4c1e-826e-1bb7b4b7cd0a","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","id":"b35c7537-f0f4-40ab-82a6-ea18ea200a81","text":"Inheritance","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Layer/references.html';"},"data-nsd-label-uuid":"d25d1ca1-3109-40d3-b1e8-66aba01428ff","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","id":"a2e7f3d2-2275-4d01-bb64-5cf75afd39d6","text":"References","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Layer/diagram.html';"},"data-nsd-label-uuid":"e3dd8d47-ebb3-42f4-b175-99768b89e5bf","icon":"fas fa-project-diagram","id":"b41bfce8-3507-4a75-af56-020397235764","text":"Diagram","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Layer/load-specification.html';"},"data-nsd-label-uuid":"05dc3c8f-19c2-4c56-bfd5-9a93fd3f9f70","id":"12286635-8cea-4700-88c7-b58d1d9faf85","text":"Load specification","type":"leaf"}],"text":"Navigation"},{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/LayerElement/attributes.html';"},"data-nsd-label-uuid":"0524a5d4-6c07-45da-ac84-3f7ee257a253","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","id":"ba7a3be0-e251-4381-838d-d67980c25faa","text":"Attributes","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/LayerElement/inheritance.html';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/LayerElement/inheritance.html#uuid-86cc5b60-1f58-421e-bd8e-7dc438bd4704';"},"data-nsd-label-uuid":"86cc5b60-1f58-421e-bd8e-7dc438bd4704","id":"6b3dfc13-9ab9-4348-bf7c-df17da01cf8b","text":"Supertypes","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/LayerElement/inheritance.html#uuid-c1d854a8-ef1a-4d3d-b09d-fbc136fd00c2';"},"data-nsd-label-uuid":"c1d854a8-ef1a-4d3d-b09d-fbc136fd00c2","id":"1e627941-a0b0-42d4-a596-72f95a378ca8","text":"Subtypes","type":"leaf"}],"text":"Sections"}],"data-nsd-label-uuid":"d9700a58-6441-4c97-8392-c554eb27b905","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","id":"7fb0115d-ae76-4757-b382-bc39e92f998e","text":"Inheritance","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/LayerElement/references.html';"},"data-nsd-label-uuid":"e1286cef-9588-4f92-981e-98dce71dc1c7","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","id":"d9d4843e-eb26-4e0f-b223-81879c697918","text":"References","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/LayerElement/diagram.html';"},"data-nsd-label-uuid":"78dee918-efe3-4f0b-aab3-ac4e9e168bca","icon":"fas fa-project-diagram","id":"bafc5159-d98c-42d6-bec4-26d4e789f996","text":"Diagram","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/LayerElement/load-specification.html';"},"data-nsd-label-uuid":"65f9e996-dc5b-49d9-8104-84326542ffb9","id":"0f037dec-6dc8-4b4e-9a77-fb466754c5b4","text":"Load specification","type":"leaf"}],"text":"Navigation"},{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Model/inheritance.html';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Model/inheritance.html#uuid-4155621d-f77a-4eb4-9338-068f4dbeb123';"},"data-nsd-label-uuid":"4155621d-f77a-4eb4-9338-068f4dbeb123","id":"6540ab7f-4969-41be-844f-9838d1b4f0d4","text":"Supertypes","type":"leaf"}],"text":"Sections"}],"data-nsd-label-uuid":"67833893-eb5b-43e1-b14c-1cabfa3b107c","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","id":"811d5def-0ac4-474c-9e9b-144644d2131a","text":"Inheritance","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Model/references.html';"},"data-nsd-label-uuid":"58549924-a047-43f1-9943-89b1022285f7","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","id":"60134642-523f-48c2-af85-1fa2efd503cf","text":"References","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Model/diagram.html';"},"data-nsd-label-uuid":"3b0cd1d9-cc0a-4f00-add8-501971870a43","icon":"fas fa-project-diagram","id":"b04c0049-d21e-4946-b19f-9dc3bf21793d","text":"Diagram","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Model/load-specification.html';"},"data-nsd-label-uuid":"5647e232-6979-41eb-aa7e-4a499822248c","id":"b60f02e5-a265-4033-aca0-d32836623a5a","text":"Load specification","type":"leaf"}],"text":"Navigation"},{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/ModelElement/attributes.html';"},"data-nsd-label-uuid":"4df595d5-614a-4c10-ae5e-371b7b53b3a4","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","id":"cff3e90b-9f54-49dc-bd21-d76482642f8f","text":"Attributes","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/ModelElement/inheritance.html';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/ModelElement/inheritance.html#uuid-23d4a84b-af4c-421e-adf7-a7c261f2c26b';"},"data-nsd-label-uuid":"23d4a84b-af4c-421e-adf7-a7c261f2c26b","id":"fbbcbf99-c7cc-4d6e-9731-046ce83cb843","text":"Supertypes","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/ModelElement/inheritance.html#uuid-00e0f719-3a9c-4c82-a244-9ded55d4215d';"},"data-nsd-label-uuid":"00e0f719-3a9c-4c82-a244-9ded55d4215d","id":"c8f73ee8-4e08-4bf8-9240-cc1b8aeb8c52","text":"Subtypes","type":"leaf"}],"text":"Sections"}],"data-nsd-label-uuid":"14d44cb9-fc66-4dc5-9678-b542b17c3dd2","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","id":"53d37763-ccfe-4d9d-982b-bae0f4cc59c3","text":"Inheritance","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/ModelElement/references.html';"},"data-nsd-label-uuid":"de234291-c672-4232-8498-ee3220395dfa","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","id":"cf88498d-7dcf-4de7-81c5-713d64246d6e","text":"References","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/ModelElement/diagram.html';"},"data-nsd-label-uuid":"02559e07-02d7-4288-af47-333b57ac0460","icon":"fas fa-project-diagram","id":"c9bc4ebe-30ff-4068-a109-352d8ffb07e7","text":"Diagram","type":"leaf"}],"text":"Navigation"},{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Node/attributes.html';"},"data-nsd-label-uuid":"06eed58f-c0b5-4f49-8204-d6237f30c23d","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","id":"02ae3276-35bb-4b78-81e5-65f84d42677f","text":"Attributes","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Node/inheritance.html';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Node/inheritance.html#uuid-b39d378f-a315-4ec7-a290-c0e964a3b738';"},"data-nsd-label-uuid":"b39d378f-a315-4ec7-a290-c0e964a3b738","id":"bdd00b18-e8cb-4697-852f-fba02419d697","text":"Supertypes","type":"leaf"}],"text":"Sections"}],"data-nsd-label-uuid":"9a937701-b01b-4c9a-a0a1-52c5bcaddf61","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","id":"8117a407-591b-4d4d-8fb0-fef19d6028ff","text":"Inheritance","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Node/references.html';"},"data-nsd-label-uuid":"42232070-c7c8-4a7f-b27c-60b13aa5a20c","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","id":"54db1529-4951-41a6-8a1b-ac16c38dc049","text":"References","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Node/diagram.html';"},"data-nsd-label-uuid":"34eb9bda-52c6-498c-b5ae-a587735e5da2","icon":"fas fa-project-diagram","id":"97754274-1984-4e87-8455-399c9b39cfef","text":"Diagram","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Node/load-specification.html';"},"data-nsd-label-uuid":"76aa8967-3f21-41de-a14a-af63155afb4c","id":"8c519b9c-b3d5-494e-a2fa-d8b1ce7eea95","text":"Load specification","type":"leaf"}],"text":"Navigation"},{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Page/attributes.html';"},"data-nsd-label-uuid":"10b0be55-a216-41f8-8741-e700fbdefc62","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","id":"bf086608-cfcb-4298-b3ab-0d5bf0905df9","text":"Attributes","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Page/inheritance.html';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Page/inheritance.html#uuid-c2bfc25b-5633-42f2-a2d9-8e87412be14b';"},"data-nsd-label-uuid":"c2bfc25b-5633-42f2-a2d9-8e87412be14b","id":"92c397b3-307f-493a-9967-f615d2213efa","text":"Supertypes","type":"leaf"}],"text":"Sections"}],"data-nsd-label-uuid":"01222284-d675-4a1e-b56b-6c88c812cc56","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","id":"c7c99ba6-4b29-4bc5-ae36-2af1b3083221","text":"Inheritance","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Page/references.html';"},"data-nsd-label-uuid":"8c42c9d8-4ebc-4efb-8773-d1c662f01eb8","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","id":"ddd6a0cd-281c-4ca7-8348-a76287d4b1ea","text":"References","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Page/diagram.html';"},"data-nsd-label-uuid":"344e0233-a750-4fed-82f1-912f1cd7ed55","icon":"fas fa-project-diagram","id":"ff2102b3-6a4c-4d91-9ddf-d17ea753553f","text":"Diagram","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Page/load-specification.html';"},"data-nsd-label-uuid":"25c4c583-25ac-4fc3-b8e5-5e789f6d4288","id":"d1131008-3045-4a6d-b60a-d36f34ae6c77","text":"Load specification","type":"leaf"}],"text":"Navigation"},{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Point/attributes.html';"},"data-nsd-label-uuid":"d3898540-7acd-4671-9bf1-376f82513e85","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","id":"4680b5aa-1189-4564-ad81-2797b32dce19","text":"Attributes","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Point/inheritance.html';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Point/inheritance.html#uuid-a6503ca7-39ec-4679-9cf6-c20abf067aa1';"},"data-nsd-label-uuid":"a6503ca7-39ec-4679-9cf6-c20abf067aa1","id":"2d6c2086-af45-4c2a-ace7-9f57bb365ba0","text":"Subtypes","type":"leaf"}],"text":"Sections"}],"data-nsd-label-uuid":"be2934fb-c19d-425a-aed1-111d48b4d969","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","id":"d1dea3f7-6ee5-4d9b-9f6b-9673f5f525ae","text":"Inheritance","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Point/diagram.html';"},"data-nsd-label-uuid":"93f5968e-cdc8-42fd-ae72-2c27051e739f","icon":"fas fa-project-diagram","id":"78fb916b-76e1-4c07-ad20-d861a1cd30f5","text":"Diagram","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Point/load-specification.html';"},"data-nsd-label-uuid":"f25dad10-9c71-4c4a-b77a-673e5a3ca52f","id":"b95dc792-3316-4ac1-843a-93d28ddb4994","text":"Load specification","type":"leaf"}],"text":"Navigation"},{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Root/attributes.html';"},"data-nsd-label-uuid":"39465839-82e9-447d-a4b0-cc49c2b465b5","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","id":"5836ac2f-d019-4853-a2a5-13b96af13f6d","text":"Attributes","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Root/inheritance.html';"},"children":[{"children":[{"a_attr":{"onclick":"window.location='references/eClassifiers/Root/inheritance.html#uuid-b3529084-393d-450e-be81-f06d7569449b';"},"data-nsd-label-uuid":"b3529084-393d-450e-be81-f06d7569449b","id":"adcf7b2c-27cb-462a-90f9-e971ac6e7198","text":"Supertypes","type":"leaf"}],"text":"Sections"}],"data-nsd-label-uuid":"c0785565-468c-4c37-9968-aa5da5fdcf29","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","id":"bf9746cc-802f-47da-afef-cfd605a1f2dd","text":"Inheritance","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Root/references.html';"},"data-nsd-label-uuid":"2b01607e-8817-478b-8259-ff7c12ca766a","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","id":"54c966bc-42a1-4266-aadc-6259f83f0c12","text":"References","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Root/diagram.html';"},"data-nsd-label-uuid":"999888ac-e187-4415-a7cf-dc9a98d483ea","icon":"fas fa-project-diagram","id":"a55639f7-df54-4b4e-92c5-0c937d4d99f2","text":"Diagram","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Root/load-specification.html';"},"data-nsd-label-uuid":"ca2c4165-bbc5-46c2-9658-240a1aa79cbc","id":"074b7f88-2a35-4e70-a885-c01a48ef9292","text":"Load specification","type":"leaf"}],"text":"Navigation"},{"children":[{"a_attr":{"onclick":"window.location='classifiers.html';"},"data-nsd-label-uuid":"1a7d4a68-fbd5-4401-bcc4-47947d8f544f","id":"bf418a50-dcce-4653-8aad-5ba967cdc4b3","text":"Classifiers","type":"leaf"}],"text":"Navigation"}]},"search":{"show_only_matches":true},"plugins":["state","search"],"state":{"key":"nsd-site-map-tree"}}));
+});</script>
+				
+		</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

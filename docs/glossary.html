@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="EN">
+  <head>
+    <title>Glossary</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/themes/default/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.1.0/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.css">
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/dark-head.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/jstree.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/components/table.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/components/table.js"></script><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9BRJVLK8CC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9BRJVLK8CC');
+</script>    
+
+<script src="search-documents.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>
+
+<script>
+// Script for full-text search of JsTree
+
+window.nsdJsTreeSearchCallback = function(str, node) { 
+    var sf = new $.vakata.search(str, true, { caseSensitive : false, fuzzy : false }); 
+    if (sf.search(node.text).isMatch) {
+		return true;
+	} 
+    let searchResult = this.search(str); 
+    for (const sr in searchResult) {
+        if (searchResult[sr].ref === node.original['data-nsd-label-uuid']) {
+            return true;
+        } 
+    } 
+    return false; 
+}.bind(lunr(function () {
+			  this.ref('id');
+			  this.field('title');
+			  this.field('content');
+
+			  for (const key in searchDocuments) {
+				  let doc = searchDocuments[key];
+				this.add({
+					id: doc['action-uuid'],
+					title: doc.title,
+					path: doc.path,
+					content: doc.content
+				});  
+			  }
+			}));
+</script>
+</head>
+  <body>
+    <div class="container-fluid nsd-app-container">
+      <div class="row">
+        <div class="col nsd-app-header">
+          <a href="https://github.com/Nasdanika-Models" data-nsd-label-uuid="34df7e3e-a690-4fbf-bfd8-bad7338f0290" class="nsd-app-header-title">
+            <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon">Nasdanika Models</a>
+          <ul class="nav nsd-app-header-navs">
+            <li class="nav-item">
+              <a href="search.html" data-nsd-label-uuid="164a8c8c-181b-470c-8a31-cfb4a145dcda" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
+            </li>
+            <li class="nav-item"><span data-nsd-label-uuid="cdff0d13-eab9-4e27-8ffd-b33f50926b24" class="navbar-text"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nsd-app-navbar">
+          <ul class="navbar navbar-light navbar-expand-lg">
+            <a href="index.html" data-nsd-label-uuid="49de9778-1647-4663-9296-464cb22fbc59" class="navbar-brand">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EPackage.gif" class="nsd-app-label-icon">model</a>
+            <button type="button" data-toggle="collapse" data-target="#nsd_mb" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="nsd_mb" class="collapse navbar-collapse">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a href="classifiers.html" data-nsd-label-uuid="1a7d4a68-fbd5-4401-bcc4-47947d8f544f" class="nav-link">Classifiers</a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <div class="row nsd-app-content-row">
+        <div class="col nsd-app-navigation-panel">
+          <div class="list-group list-group-flush">
+            <a href="references/eClassifiers/Connection/index.html" data-nsd-label-uuid="a32f6362-f1c0-45d3-aa10-452af623cb90" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Connection</a>
+            <a href="references/eClassifiers/Document/index.html" data-nsd-label-uuid="64334b9b-03ef-4193-8e1f-9c180a910f2f" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Document</a>
+            <a href="references/eClassifiers/Geometry/index.html" data-nsd-label-uuid="9a77b693-556f-4dea-949e-d5f917d3d384" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Geometry</a>
+            <a href="references/eClassifiers/Layer/index.html" data-nsd-label-uuid="ea1a81b5-57da-4d3e-824d-888ebb303a92" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Layer</a>
+            <a href="references/eClassifiers/LayerElement/index.html" data-nsd-label-uuid="aa0c14a6-c55a-4c79-823a-0a95d45e3bde" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">LayerElement</a>
+            <a href="references/eClassifiers/Model/index.html" data-nsd-label-uuid="3b285fcf-671a-48bf-bceb-1c5b180991f2" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Model</a>
+            <a href="references/eClassifiers/ModelElement/index.html" data-nsd-label-uuid="3e2af645-e770-40db-85b6-2c4d9ac48002" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"><i>ModelElement</i></a>
+            <a href="references/eClassifiers/Node/index.html" data-nsd-label-uuid="1af930dc-3ce6-4a75-b9e7-8a8ddf12193a" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Node</a>
+            <a href="references/eClassifiers/Page/index.html" data-nsd-label-uuid="9001604e-0745-47fe-b223-c6947a83f943" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Page</a>
+            <a href="references/eClassifiers/Point/index.html" data-nsd-label-uuid="c1713c4e-5b19-45d8-8fa1-091a8cdb331b" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Point</a>
+            <a href="references/eClassifiers/Root/index.html" data-nsd-label-uuid="0ad99414-882f-4a22-a505-7a73ac0bac80" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Root</a>
+          </div>
+        </div>
+        <div data-nsd-label-uuid="cdff0d13-eab9-4e27-8ffd-b33f50926b24" data-nsd-action-uris="uuid:cdff0d13-eab9-4e27-8ffd-b33f50926b24" class="col nsd-app-content-panel">
+          <div class="container-fluid">
+            <div class="row nsd-app-content-panel-title-and-items-row">
+              <div class="col-auto">
+                <h1><span data-nsd-label-uuid="cdff0d13-eab9-4e27-8ffd-b33f50926b24" class="nsd-app-content-panel-title"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</span>
+                </h1>
+              </div>
+            </div>
+            <div class="row nsd-app-content-panel-content-row">
+              <div class="col">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col">     	<div id="semantic-info-app" class="container-fluid">
+     		<div class="row">
+     			<div class="col">
+					<b-form-group label="Filter" label-for="filter-input" label-cols-sm="auto" label-align-sm="right" label-size="sm" class="mb-0" description="You can use wildcards, e.g. 'foo*' or 'f*o'; title or content fields, e.g. 'title:foo* bar'; boosts, e.g. 'foo^10 bar'; fuzzy matches, e.g. 'foo~1'; and term presence, e.g. '+foo bar -baz'">
+			          <b-input-group size="sm">
+			            <b-form-input id="filter-input" v-model="filter" type="search" placeholder="Type to Search" debounce="700"></b-form-input>
+			
+			            <b-input-group-append>
+			              <b-button :disabled="!filter" @click="filter = ''">Clear</b-button>
+			            </b-input-group-append>
+			          </b-input-group>
+			        </b-form-group>
+			        
+				    <b-form-checkbox id="identifiers-checkbox" v-model="identifierField" name="identifier-checkbox" value="true">
+				      Identifier(s)
+				    </b-form-checkbox>			        
+			        
+				    <b-form-checkbox id="hideUUID-checkbox" v-model="hideUUID" name="hideUUID-checkbox" value="true">
+				      Hide UUID
+				    </b-form-checkbox>			        
+			        
+				    <b-table striped hover :items="items" :fields="fields">
+				      <template #cell(element)="data">
+				        <a :href="data.value.location">
+					      	<span v-if="data.value.icon">
+					      		<img v-if="data.value.icon.includes('/')" :src="data.value.icon">
+					      		<i v-else :class="data.value.icon"></i>
+					      	</span>
+				        	{{data.value.name}}
+				        
+				      </a></template>	
+				      <template #cell(identifiers)="data">
+				      	<span v-if="data.value.length == 1">
+					        {{data.value[0].value}}
+					        <i class="far fa-copy nsd-copy-to-clipboard" style="cursor:pointer" title="Copy identifier to clipboard" :onclick="data.value[0].onClick"></i> 
+				      	</span>
+				      	<ul v-else>
+				      		<li v-for="item in data.value">
+						        {{item.value}} <i class="far fa-copy nsd-copy-to-clipboard" style="cursor:pointer" title="Copy identifier to clipboard" :onclick="item.onClick"></i> 
+				      		</li>
+				      	</ul>
+				      </template>	
+				    </b-table>
+	        	</div>
+	        </div>	        
+     	</div>
+     
+		<script>		      
+			new Vue({
+				  el: '#semantic-info-app',
+				  data: {
+			        	filter: null,
+			        	semanticInfo: [{"identifiers":["uuid:34df7e3e-a690-4fbf-bfd8-bad7338f0290"],"name":"Nasdanika Models","icon":"https://docs.nasdanika.org/images/nasdanika-logo.png","location":"https://github.com/Nasdanika-Models","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"children","identifiers":["uuid:34df7e3e-a690-4fbf-bfd8-bad7338f0290"]},"identifiers":["uuid:164a8c8c-181b-470c-8a31-cfb4a145dcda"],"name":"Search","icon":"fas fa-search","location":"search.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"children","identifiers":["uuid:34df7e3e-a690-4fbf-bfd8-bad7338f0290"]},"identifiers":["uuid:cdff0d13-eab9-4e27-8ffd-b33f50926b24"],"name":"Glossary","icon":"fas fa-book","location":"glossary.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"identifiers":["ecore://nasdanika.org/core/drawio/model"],"name":"model","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EPackage.gif","location":"index.html","type":{"name":"EPackage","ns-uri":"http://www.eclipse.org/emf/2002/Ecore"}},{"container":{"reference":"eClassifiers","identifiers":["ecore://nasdanika.org/core/drawio/model"]},"identifiers":["ecore://nasdanika.org/core/drawio/model/eClassifiers/Connection"],"name":"Connection","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","location":"references/eClassifiers/Connection/index.html","type":{"name":"EClass","ns-uri":"http://www.eclipse.org/emf/2002/Ecore"}},{"container":{"reference":"navigation","identifiers":["uuid:a32f6362-f1c0-45d3-aa10-452af623cb90"]},"identifiers":["uuid:7bd1abf2-c31c-4aca-8dc9-54b799a7064a"],"name":"Attributes","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","location":"references/eClassifiers/Connection/attributes.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:a32f6362-f1c0-45d3-aa10-452af623cb90"]},"identifiers":["uuid:a66993ec-f698-42cf-b00f-ca5bc83b1030"],"name":"Inheritance","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","location":"references/eClassifiers/Connection/inheritance.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"sections","identifiers":["uuid:a66993ec-f698-42cf-b00f-ca5bc83b1030"]},"identifiers":["uuid:9290070a-ca06-4536-a762-c3d36b940979"],"name":"Supertypes","location":"references/eClassifiers/Connection/inheritance.html#uuid-9290070a-ca06-4536-a762-c3d36b940979","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:a32f6362-f1c0-45d3-aa10-452af623cb90"]},"identifiers":["uuid:505bfb01-1271-4223-84fe-0410329a8107"],"name":"References","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","location":"references/eClassifiers/Connection/references.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:a32f6362-f1c0-45d3-aa10-452af623cb90"]},"identifiers":["uuid:8a3feff1-4613-44c4-83ee-7d5013150ae3"],"name":"Diagram","icon":"fas fa-project-diagram","location":"references/eClassifiers/Connection/diagram.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:a32f6362-f1c0-45d3-aa10-452af623cb90"]},"identifiers":["uuid:42340e63-e55b-4eee-9665-52d7115890d3"],"name":"Load specification","location":"references/eClassifiers/Connection/load-specification.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"eClassifiers","identifiers":["ecore://nasdanika.org/core/drawio/model"]},"identifiers":["ecore://nasdanika.org/core/drawio/model/eClassifiers/Document"],"name":"Document","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","location":"references/eClassifiers/Document/index.html","type":{"name":"EClass","ns-uri":"http://www.eclipse.org/emf/2002/Ecore"}},{"container":{"reference":"navigation","identifiers":["uuid:64334b9b-03ef-4193-8e1f-9c180a910f2f"]},"identifiers":["uuid:bc5131a6-479c-49ba-9cc1-85ab32b957f1"],"name":"Attributes","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","location":"references/eClassifiers/Document/attributes.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:64334b9b-03ef-4193-8e1f-9c180a910f2f"]},"identifiers":["uuid:5f063870-e366-4062-8154-afb520e89182"],"name":"Inheritance","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","location":"references/eClassifiers/Document/inheritance.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"sections","identifiers":["uuid:5f063870-e366-4062-8154-afb520e89182"]},"identifiers":["uuid:ae047901-43f0-406d-9a88-fc993965b5ea"],"name":"Supertypes","location":"references/eClassifiers/Document/inheritance.html#uuid-ae047901-43f0-406d-9a88-fc993965b5ea","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:64334b9b-03ef-4193-8e1f-9c180a910f2f"]},"identifiers":["uuid:fa5ed223-6923-4467-81e3-8e91ff539e22"],"name":"References","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","location":"references/eClassifiers/Document/references.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:64334b9b-03ef-4193-8e1f-9c180a910f2f"]},"identifiers":["uuid:5b62a901-cb3c-484a-b9a5-2a7d41d3d853"],"name":"Diagram","icon":"fas fa-project-diagram","location":"references/eClassifiers/Document/diagram.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:64334b9b-03ef-4193-8e1f-9c180a910f2f"]},"identifiers":["uuid:42f48c37-c324-4e13-b8eb-a52571a8ef84"],"name":"Load specification","location":"references/eClassifiers/Document/load-specification.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"eClassifiers","identifiers":["ecore://nasdanika.org/core/drawio/model"]},"identifiers":["ecore://nasdanika.org/core/drawio/model/eClassifiers/Geometry"],"name":"Geometry","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","location":"references/eClassifiers/Geometry/index.html","type":{"name":"EClass","ns-uri":"http://www.eclipse.org/emf/2002/Ecore"}},{"container":{"reference":"navigation","identifiers":["uuid:9a77b693-556f-4dea-949e-d5f917d3d384"]},"identifiers":["uuid:008c1e81-06b5-4f89-8ae6-001e11885b0d"],"name":"Attributes","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","location":"references/eClassifiers/Geometry/attributes.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:9a77b693-556f-4dea-949e-d5f917d3d384"]},"identifiers":["uuid:6e89d987-76ef-4a6d-b998-b0253c7da21a"],"name":"Inheritance","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","location":"references/eClassifiers/Geometry/inheritance.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"sections","identifiers":["uuid:6e89d987-76ef-4a6d-b998-b0253c7da21a"]},"identifiers":["uuid:d809d46c-ea5e-4d3d-89f5-40b335afa482"],"name":"Supertypes","location":"references/eClassifiers/Geometry/inheritance.html#uuid-d809d46c-ea5e-4d3d-89f5-40b335afa482","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:9a77b693-556f-4dea-949e-d5f917d3d384"]},"identifiers":["uuid:168f9f57-0c62-4edc-8efb-181af1c5bb3e"],"name":"References","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","location":"references/eClassifiers/Geometry/references.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:9a77b693-556f-4dea-949e-d5f917d3d384"]},"identifiers":["uuid:9c69b8fe-78a8-4b68-92f8-12b4b8df59fb"],"name":"Diagram","icon":"fas fa-project-diagram","location":"references/eClassifiers/Geometry/diagram.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:9a77b693-556f-4dea-949e-d5f917d3d384"]},"identifiers":["uuid:221c9ee3-4f14-465c-a6ce-22993acf7588"],"name":"Load specification","location":"references/eClassifiers/Geometry/load-specification.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"eClassifiers","identifiers":["ecore://nasdanika.org/core/drawio/model"]},"identifiers":["ecore://nasdanika.org/core/drawio/model/eClassifiers/Layer"],"name":"Layer","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","location":"references/eClassifiers/Layer/index.html","type":{"name":"EClass","ns-uri":"http://www.eclipse.org/emf/2002/Ecore"}},{"container":{"reference":"navigation","identifiers":["uuid:ea1a81b5-57da-4d3e-824d-888ebb303a92"]},"identifiers":["uuid:489d30f4-b322-41f6-98c2-30a182bc04f6"],"name":"Attributes","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","location":"references/eClassifiers/Layer/attributes.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:ea1a81b5-57da-4d3e-824d-888ebb303a92"]},"identifiers":["uuid:2cbf16d1-8d97-4c1e-826e-1bb7b4b7cd0a"],"name":"Inheritance","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","location":"references/eClassifiers/Layer/inheritance.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"sections","identifiers":["uuid:2cbf16d1-8d97-4c1e-826e-1bb7b4b7cd0a"]},"identifiers":["uuid:1a6ed17b-5aba-411d-87ac-d6ef348486a8"],"name":"Supertypes","location":"references/eClassifiers/Layer/inheritance.html#uuid-1a6ed17b-5aba-411d-87ac-d6ef348486a8","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"sections","identifiers":["uuid:2cbf16d1-8d97-4c1e-826e-1bb7b4b7cd0a"]},"identifiers":["uuid:914ce4fb-7b5c-40da-9a02-c6d33cad1c4d"],"name":"Subtypes","location":"references/eClassifiers/Layer/inheritance.html#uuid-914ce4fb-7b5c-40da-9a02-c6d33cad1c4d","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:ea1a81b5-57da-4d3e-824d-888ebb303a92"]},"identifiers":["uuid:d25d1ca1-3109-40d3-b1e8-66aba01428ff"],"name":"References","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","location":"references/eClassifiers/Layer/references.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:ea1a81b5-57da-4d3e-824d-888ebb303a92"]},"identifiers":["uuid:e3dd8d47-ebb3-42f4-b175-99768b89e5bf"],"name":"Diagram","icon":"fas fa-project-diagram","location":"references/eClassifiers/Layer/diagram.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:ea1a81b5-57da-4d3e-824d-888ebb303a92"]},"identifiers":["uuid:05dc3c8f-19c2-4c56-bfd5-9a93fd3f9f70"],"name":"Load specification","location":"references/eClassifiers/Layer/load-specification.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"eClassifiers","identifiers":["ecore://nasdanika.org/core/drawio/model"]},"identifiers":["ecore://nasdanika.org/core/drawio/model/eClassifiers/LayerElement"],"name":"LayerElement","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","location":"references/eClassifiers/LayerElement/index.html","type":{"name":"EClass","ns-uri":"http://www.eclipse.org/emf/2002/Ecore"}},{"container":{"reference":"navigation","identifiers":["uuid:aa0c14a6-c55a-4c79-823a-0a95d45e3bde"]},"identifiers":["uuid:0524a5d4-6c07-45da-ac84-3f7ee257a253"],"name":"Attributes","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","location":"references/eClassifiers/LayerElement/attributes.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:aa0c14a6-c55a-4c79-823a-0a95d45e3bde"]},"identifiers":["uuid:d9700a58-6441-4c97-8392-c554eb27b905"],"name":"Inheritance","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","location":"references/eClassifiers/LayerElement/inheritance.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"sections","identifiers":["uuid:d9700a58-6441-4c97-8392-c554eb27b905"]},"identifiers":["uuid:86cc5b60-1f58-421e-bd8e-7dc438bd4704"],"name":"Supertypes","location":"references/eClassifiers/LayerElement/inheritance.html#uuid-86cc5b60-1f58-421e-bd8e-7dc438bd4704","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"sections","identifiers":["uuid:d9700a58-6441-4c97-8392-c554eb27b905"]},"identifiers":["uuid:c1d854a8-ef1a-4d3d-b09d-fbc136fd00c2"],"name":"Subtypes","location":"references/eClassifiers/LayerElement/inheritance.html#uuid-c1d854a8-ef1a-4d3d-b09d-fbc136fd00c2","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:aa0c14a6-c55a-4c79-823a-0a95d45e3bde"]},"identifiers":["uuid:e1286cef-9588-4f92-981e-98dce71dc1c7"],"name":"References","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","location":"references/eClassifiers/LayerElement/references.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:aa0c14a6-c55a-4c79-823a-0a95d45e3bde"]},"identifiers":["uuid:78dee918-efe3-4f0b-aab3-ac4e9e168bca"],"name":"Diagram","icon":"fas fa-project-diagram","location":"references/eClassifiers/LayerElement/diagram.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:aa0c14a6-c55a-4c79-823a-0a95d45e3bde"]},"identifiers":["uuid:65f9e996-dc5b-49d9-8104-84326542ffb9"],"name":"Load specification","location":"references/eClassifiers/LayerElement/load-specification.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"eClassifiers","identifiers":["ecore://nasdanika.org/core/drawio/model"]},"identifiers":["ecore://nasdanika.org/core/drawio/model/eClassifiers/Model"],"name":"Model","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","location":"references/eClassifiers/Model/index.html","type":{"name":"EClass","ns-uri":"http://www.eclipse.org/emf/2002/Ecore"}},{"container":{"reference":"navigation","identifiers":["uuid:3b285fcf-671a-48bf-bceb-1c5b180991f2"]},"identifiers":["uuid:67833893-eb5b-43e1-b14c-1cabfa3b107c"],"name":"Inheritance","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","location":"references/eClassifiers/Model/inheritance.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"sections","identifiers":["uuid:67833893-eb5b-43e1-b14c-1cabfa3b107c"]},"identifiers":["uuid:4155621d-f77a-4eb4-9338-068f4dbeb123"],"name":"Supertypes","location":"references/eClassifiers/Model/inheritance.html#uuid-4155621d-f77a-4eb4-9338-068f4dbeb123","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:3b285fcf-671a-48bf-bceb-1c5b180991f2"]},"identifiers":["uuid:58549924-a047-43f1-9943-89b1022285f7"],"name":"References","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","location":"references/eClassifiers/Model/references.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:3b285fcf-671a-48bf-bceb-1c5b180991f2"]},"identifiers":["uuid:3b0cd1d9-cc0a-4f00-add8-501971870a43"],"name":"Diagram","icon":"fas fa-project-diagram","location":"references/eClassifiers/Model/diagram.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:3b285fcf-671a-48bf-bceb-1c5b180991f2"]},"identifiers":["uuid:5647e232-6979-41eb-aa7e-4a499822248c"],"name":"Load specification","location":"references/eClassifiers/Model/load-specification.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"eClassifiers","identifiers":["ecore://nasdanika.org/core/drawio/model"]},"identifiers":["ecore://nasdanika.org/core/drawio/model/eClassifiers/ModelElement"],"name":"<i>ModelElement<\/i>","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","location":"references/eClassifiers/ModelElement/index.html","type":{"name":"EClass","ns-uri":"http://www.eclipse.org/emf/2002/Ecore"}},{"container":{"reference":"navigation","identifiers":["uuid:3e2af645-e770-40db-85b6-2c4d9ac48002"]},"identifiers":["uuid:4df595d5-614a-4c10-ae5e-371b7b53b3a4"],"name":"Attributes","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","location":"references/eClassifiers/ModelElement/attributes.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:3e2af645-e770-40db-85b6-2c4d9ac48002"]},"identifiers":["uuid:14d44cb9-fc66-4dc5-9678-b542b17c3dd2"],"name":"Inheritance","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","location":"references/eClassifiers/ModelElement/inheritance.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"sections","identifiers":["uuid:14d44cb9-fc66-4dc5-9678-b542b17c3dd2"]},"identifiers":["uuid:23d4a84b-af4c-421e-adf7-a7c261f2c26b"],"name":"Supertypes","location":"references/eClassifiers/ModelElement/inheritance.html#uuid-23d4a84b-af4c-421e-adf7-a7c261f2c26b","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"sections","identifiers":["uuid:14d44cb9-fc66-4dc5-9678-b542b17c3dd2"]},"identifiers":["uuid:00e0f719-3a9c-4c82-a244-9ded55d4215d"],"name":"Subtypes","location":"references/eClassifiers/ModelElement/inheritance.html#uuid-00e0f719-3a9c-4c82-a244-9ded55d4215d","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:3e2af645-e770-40db-85b6-2c4d9ac48002"]},"identifiers":["uuid:de234291-c672-4232-8498-ee3220395dfa"],"name":"References","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","location":"references/eClassifiers/ModelElement/references.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:3e2af645-e770-40db-85b6-2c4d9ac48002"]},"identifiers":["uuid:02559e07-02d7-4288-af47-333b57ac0460"],"name":"Diagram","icon":"fas fa-project-diagram","location":"references/eClassifiers/ModelElement/diagram.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"eClassifiers","identifiers":["ecore://nasdanika.org/core/drawio/model"]},"identifiers":["ecore://nasdanika.org/core/drawio/model/eClassifiers/Node"],"name":"Node","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","location":"references/eClassifiers/Node/index.html","type":{"name":"EClass","ns-uri":"http://www.eclipse.org/emf/2002/Ecore"}},{"container":{"reference":"navigation","identifiers":["uuid:1af930dc-3ce6-4a75-b9e7-8a8ddf12193a"]},"identifiers":["uuid:06eed58f-c0b5-4f49-8204-d6237f30c23d"],"name":"Attributes","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","location":"references/eClassifiers/Node/attributes.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:1af930dc-3ce6-4a75-b9e7-8a8ddf12193a"]},"identifiers":["uuid:9a937701-b01b-4c9a-a0a1-52c5bcaddf61"],"name":"Inheritance","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","location":"references/eClassifiers/Node/inheritance.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"sections","identifiers":["uuid:9a937701-b01b-4c9a-a0a1-52c5bcaddf61"]},"identifiers":["uuid:b39d378f-a315-4ec7-a290-c0e964a3b738"],"name":"Supertypes","location":"references/eClassifiers/Node/inheritance.html#uuid-b39d378f-a315-4ec7-a290-c0e964a3b738","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:1af930dc-3ce6-4a75-b9e7-8a8ddf12193a"]},"identifiers":["uuid:42232070-c7c8-4a7f-b27c-60b13aa5a20c"],"name":"References","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","location":"references/eClassifiers/Node/references.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:1af930dc-3ce6-4a75-b9e7-8a8ddf12193a"]},"identifiers":["uuid:34eb9bda-52c6-498c-b5ae-a587735e5da2"],"name":"Diagram","icon":"fas fa-project-diagram","location":"references/eClassifiers/Node/diagram.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:1af930dc-3ce6-4a75-b9e7-8a8ddf12193a"]},"identifiers":["uuid:76aa8967-3f21-41de-a14a-af63155afb4c"],"name":"Load specification","location":"references/eClassifiers/Node/load-specification.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"eClassifiers","identifiers":["ecore://nasdanika.org/core/drawio/model"]},"identifiers":["ecore://nasdanika.org/core/drawio/model/eClassifiers/Page"],"name":"Page","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","location":"references/eClassifiers/Page/index.html","type":{"name":"EClass","ns-uri":"http://www.eclipse.org/emf/2002/Ecore"}},{"container":{"reference":"navigation","identifiers":["uuid:9001604e-0745-47fe-b223-c6947a83f943"]},"identifiers":["uuid:10b0be55-a216-41f8-8741-e700fbdefc62"],"name":"Attributes","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","location":"references/eClassifiers/Page/attributes.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:9001604e-0745-47fe-b223-c6947a83f943"]},"identifiers":["uuid:01222284-d675-4a1e-b56b-6c88c812cc56"],"name":"Inheritance","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","location":"references/eClassifiers/Page/inheritance.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"sections","identifiers":["uuid:01222284-d675-4a1e-b56b-6c88c812cc56"]},"identifiers":["uuid:c2bfc25b-5633-42f2-a2d9-8e87412be14b"],"name":"Supertypes","location":"references/eClassifiers/Page/inheritance.html#uuid-c2bfc25b-5633-42f2-a2d9-8e87412be14b","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:9001604e-0745-47fe-b223-c6947a83f943"]},"identifiers":["uuid:8c42c9d8-4ebc-4efb-8773-d1c662f01eb8"],"name":"References","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","location":"references/eClassifiers/Page/references.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:9001604e-0745-47fe-b223-c6947a83f943"]},"identifiers":["uuid:344e0233-a750-4fed-82f1-912f1cd7ed55"],"name":"Diagram","icon":"fas fa-project-diagram","location":"references/eClassifiers/Page/diagram.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:9001604e-0745-47fe-b223-c6947a83f943"]},"identifiers":["uuid:25c4c583-25ac-4fc3-b8e5-5e789f6d4288"],"name":"Load specification","location":"references/eClassifiers/Page/load-specification.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"eClassifiers","identifiers":["ecore://nasdanika.org/core/drawio/model"]},"identifiers":["ecore://nasdanika.org/core/drawio/model/eClassifiers/Point"],"name":"Point","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","location":"references/eClassifiers/Point/index.html","type":{"name":"EClass","ns-uri":"http://www.eclipse.org/emf/2002/Ecore"}},{"container":{"reference":"navigation","identifiers":["uuid:c1713c4e-5b19-45d8-8fa1-091a8cdb331b"]},"identifiers":["uuid:d3898540-7acd-4671-9bf1-376f82513e85"],"name":"Attributes","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","location":"references/eClassifiers/Point/attributes.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:c1713c4e-5b19-45d8-8fa1-091a8cdb331b"]},"identifiers":["uuid:be2934fb-c19d-425a-aed1-111d48b4d969"],"name":"Inheritance","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","location":"references/eClassifiers/Point/inheritance.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"sections","identifiers":["uuid:be2934fb-c19d-425a-aed1-111d48b4d969"]},"identifiers":["uuid:a6503ca7-39ec-4679-9cf6-c20abf067aa1"],"name":"Subtypes","location":"references/eClassifiers/Point/inheritance.html#uuid-a6503ca7-39ec-4679-9cf6-c20abf067aa1","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:c1713c4e-5b19-45d8-8fa1-091a8cdb331b"]},"identifiers":["uuid:93f5968e-cdc8-42fd-ae72-2c27051e739f"],"name":"Diagram","icon":"fas fa-project-diagram","location":"references/eClassifiers/Point/diagram.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:c1713c4e-5b19-45d8-8fa1-091a8cdb331b"]},"identifiers":["uuid:f25dad10-9c71-4c4a-b77a-673e5a3ca52f"],"name":"Load specification","location":"references/eClassifiers/Point/load-specification.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"eClassifiers","identifiers":["ecore://nasdanika.org/core/drawio/model"]},"identifiers":["ecore://nasdanika.org/core/drawio/model/eClassifiers/Root"],"name":"Root","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","location":"references/eClassifiers/Root/index.html","type":{"name":"EClass","ns-uri":"http://www.eclipse.org/emf/2002/Ecore"}},{"container":{"reference":"navigation","identifiers":["uuid:0ad99414-882f-4a22-a505-7a73ac0bac80"]},"identifiers":["uuid:39465839-82e9-447d-a4b0-cc49c2b465b5"],"name":"Attributes","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EAttribute.gif","location":"references/eClassifiers/Root/attributes.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:0ad99414-882f-4a22-a505-7a73ac0bac80"]},"identifiers":["uuid:c0785565-468c-4c37-9968-aa5da5fdcf29"],"name":"Inheritance","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif","location":"references/eClassifiers/Root/inheritance.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"sections","identifiers":["uuid:c0785565-468c-4c37-9968-aa5da5fdcf29"]},"identifiers":["uuid:b3529084-393d-450e-be81-f06d7569449b"],"name":"Supertypes","location":"references/eClassifiers/Root/inheritance.html#uuid-b3529084-393d-450e-be81-f06d7569449b","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:0ad99414-882f-4a22-a505-7a73ac0bac80"]},"identifiers":["uuid:2b01607e-8817-478b-8259-ff7c12ca766a"],"name":"References","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EReference.gif","location":"references/eClassifiers/Root/references.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:0ad99414-882f-4a22-a505-7a73ac0bac80"]},"identifiers":["uuid:999888ac-e187-4415-a7cf-dc9a98d483ea"],"name":"Diagram","icon":"fas fa-project-diagram","location":"references/eClassifiers/Root/diagram.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:0ad99414-882f-4a22-a505-7a73ac0bac80"]},"identifiers":["uuid:ca2c4165-bbc5-46c2-9658-240a1aa79cbc"],"name":"Load specification","location":"references/eClassifiers/Root/load-specification.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}},{"container":{"reference":"navigation","identifiers":["uuid:49de9778-1647-4663-9296-464cb22fbc59"]},"identifiers":["uuid:1a7d4a68-fbd5-4401-bcc4-47947d8f544f"],"name":"Classifiers","location":"classifiers.html","type":{"name":"Action","ns-uri":"ecore://nasdanika.org/html/app"}}],
+			        	identifierField: false,
+			        	hideUUID: true
+				  },				  
+				  computed: {			
+					fields: function() {
+			        	let fields = [
+			                {
+			                  key: 'element',
+			                  label: "Element",
+			                  sortable: false
+			                },
+			                {
+			                  key: 'description',
+			                  label: 'Description',
+			                  sortable: true
+			                }
+			              ];
+			        	
+			        	if (this.identifierField) {
+			        		fields.push(			                {
+				                  key: 'identifiers',
+				                  label: "Identifier(s)",
+				                  sortable: true
+				            });
+			        	}
+						return fields;
+					},  
+					items: function() {
+						const ret = []; 
+						for (let idx in this.semanticInfo) {
+							let semanticEntry = this.semanticInfo[idx];
+							let entry = {
+								identifiers: [],
+								element: {}
+							};
+							
+							if (semanticEntry.location) {
+								entry.element.location = semanticEntry.location;
+							}
+							if (semanticEntry.name) {
+								entry.element.name = semanticEntry.name;
+							}
+							if (semanticEntry.icon) {
+								entry.element.icon = semanticEntry.icon;
+							}
+							if (semanticEntry.description) {
+								entry.description = semanticEntry.description;
+							}
+							
+							if (semanticEntry.identifiers) {
+								for (let iIdx in semanticEntry.identifiers) {
+									let identifier = semanticEntry.identifiers[iIdx];
+									if (this.hideUUID && identifier && identifier.startsWith("uuid:")) {
+										continue;
+									}
+									entry.identifiers.push({
+										value: identifier,
+										onClick: "navigator.clipboard.writeText('" + identifier +"')"							
+									});
+								}
+							}
+
+							ret.push(entry);
+						}
+						
+						return ret.filter(item => {
+							if (item.identifiers.length == 0) {
+								return false;
+							}
+							if (this.filter && this.filter.length > 1) {
+								for (let identifierItem in item.identifiers) {
+									let identifier = item.identifiers[identifierItem].value;
+									if (identifier && identifier.toLowerCase().includes(this.filter.toLowerCase())) {
+										return true;
+									}									
+								}
+								if (item.description && item.description.toLowerCase().includes(this.filter.toLowerCase())) {
+									return true;
+								}
+								if (item.element.name && item.element.name.toLowerCase().includes(this.filter.toLowerCase())) {
+									return true;
+								}
+								return false;
+							}
+							return true;
+						}).sort((a, b) => {
+							if (a.element.name) {
+								if (b.element.name) {
+									return a.element.name.localeCompare(b.element.name);
+								}					
+								return -1;
+							}
+							return 1;
+						}); 						
+					}
+				  }
+			});   			
+		</script>
+				
+		</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
