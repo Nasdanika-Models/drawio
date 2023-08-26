@@ -24,7 +24,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/components/table.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/components/table.js"></script><!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/components/table.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.2.2/echarts.min.js"></script><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BRJVLK8CC"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -74,14 +75,14 @@ window.nsdJsTreeSearchCallback = function(str, node) {
     <div class="container-fluid nsd-app-container">
       <div class="row">
         <div class="col nsd-app-header">
-          <a href="https://github.com/Nasdanika-Models" data-nsd-label-uuid="396caea1-3345-4d1c-b18d-7298b5cbca8b" class="nsd-app-header-title">
+          <a href="https://github.com/Nasdanika-Models" data-nsd-label-uuid="5356cbf6-6559-4590-9f11-44f67cdc2d60" class="nsd-app-header-title">
             <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon">Nasdanika Models</a>
           <ul class="nav nsd-app-header-navs">
             <li class="nav-item">
-              <a href="../../../search.html" data-nsd-label-uuid="e2ac238b-6346-4dbe-b40e-29fcb9e3c232" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
+              <a href="../../../search.html" data-nsd-label-uuid="da04e37e-98f0-452d-ab9f-392168c7248c" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
             </li>
             <li class="nav-item">
-              <a href="../../../glossary.html" data-nsd-label-uuid="b43777f3-8634-461f-912a-584e01067e06" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
+              <a href="../../../glossary.html" data-nsd-label-uuid="ce175e9d-44f8-4e91-8b7d-56dcc67101d0" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
             </li>
           </ul>
         </div>
@@ -89,14 +90,21 @@ window.nsdJsTreeSearchCallback = function(str, node) {
       <div class="row">
         <div class="col nsd-app-navbar">
           <ul class="navbar navbar-light navbar-expand-lg">
-            <a href="../../../index.html" data-nsd-label-uuid="26aee85b-82ba-4dbd-9e87-9794fe2a1cab" class="navbar-brand">
+            <a href="../../../index.html" data-nsd-label-uuid="8deb3a71-b8fd-4894-85af-61b76ad55f7e" class="navbar-brand">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EPackage.gif" class="nsd-app-label-icon">model</a>
-            <button type="button" data-toggle="collapse" data-target="#nsd_eb" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            <button type="button" data-toggle="collapse" data-target="#nsd_bo" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
             </button>
-            <div id="nsd_eb" class="collapse navbar-collapse">
+            <div id="nsd_bo" class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <a href="../../../classifiers.html" data-nsd-label-uuid="63c8bf65-6f1b-43b7-b534-9d08cc668f55" class="nav-link">Classifiers</a>
+                  <a href="../../../classifiers.html" data-nsd-label-uuid="f75e34da-9506-488e-af73-ddbeb84128aa" class="nav-link">Classifiers</a>
+                </li>
+                <li class="nav-item">
+                  <a href="../../../diagram.html" data-nsd-label-uuid="2ac81e43-c3a2-480b-a3b3-caab049d3bd0" class="nav-link"><span class="fas fa-project-diagram nsd-app-label-icon"></span>Diagram</a>
+                </li>
+                <li class="nav-item">
+                  <a href="../../../graph.html" data-nsd-label-uuid="084ee1f9-fd36-4d85-9e50-c231f0735df7" class="nav-link">
+                    <img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/external-diagram-seo-media-dreamstale-lineal-dreamstale.png" class="nsd-app-label-icon">Graph</a>
                 </li>
               </ul>
             </div>
@@ -106,41 +114,41 @@ window.nsdJsTreeSearchCallback = function(str, node) {
       <div class="row nsd-app-content-row">
         <div class="col nsd-app-navigation-panel">
           <div class="list-group list-group-flush">
-            <a href="../Connection/index.html" data-nsd-label-uuid="0860c0ed-a642-4d69-a378-a428bb3363ee" class="list-group-item list-group-action">
+            <a href="../Connection/index.html" data-nsd-label-uuid="4a48de94-6cd1-44c3-a5f3-757b152485fd" class="list-group-item list-group-action">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Connection</a>
-            <a href="../Document/index.html" data-nsd-label-uuid="528c0c87-f68a-4eaf-b4fa-a0a78ccd5e86" class="list-group-item list-group-action">
+            <a href="../Document/index.html" data-nsd-label-uuid="3d3c69f9-32d3-4d78-a821-05f23119297e" class="list-group-item list-group-action">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Document</a>
-            <a href="../Geometry/index.html" data-nsd-label-uuid="f4837450-50ed-4e8d-9739-d4675de0431c" class="list-group-item list-group-action">
+            <a href="../Geometry/index.html" data-nsd-label-uuid="341a791d-9961-4802-aa24-ed2c83d37a20" class="list-group-item list-group-action">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Geometry</a>
-            <a href="../Layer/index.html" data-nsd-label-uuid="4f6170ef-2bd1-4500-af45-fdf7a64c0f04" class="list-group-item list-group-action">
+            <a href="../Layer/index.html" data-nsd-label-uuid="27c36dd5-c9d6-4443-920f-66803d5bc23e" class="list-group-item list-group-action">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Layer</a>
-            <a href="../LayerElement/index.html" data-nsd-label-uuid="9bbda14c-4cf1-400c-966c-5525d49d8e88" class="list-group-item list-group-action">
+            <a href="../LayerElement/index.html" data-nsd-label-uuid="e20af982-66af-46bc-858a-daa8731122a9" class="list-group-item list-group-action">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">LayerElement</a>
-            <a href="../Model/index.html" data-nsd-label-uuid="d3b088a0-1ce3-48c4-82ea-9704fe6e19d3" class="list-group-item list-group-action">
+            <a href="../Model/index.html" data-nsd-label-uuid="0c56c161-3cf2-4f7c-ac28-2a6e444ff425" class="list-group-item list-group-action">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Model</a>
-            <a href="../ModelElement/index.html" data-nsd-label-uuid="ae77f38d-4abf-465a-aa9a-9f60d1f8aa1b" class="list-group-item list-group-action">
+            <a href="../ModelElement/index.html" data-nsd-label-uuid="ebdda349-4aba-48ce-b7bf-1800c919bca9" class="list-group-item list-group-action">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"><i>ModelElement</i></a>
-            <a href="../Node/index.html" data-nsd-label-uuid="5bed8114-8702-4244-8c8e-80b2f7c7230e" class="list-group-item list-group-action">
+            <a href="../Node/index.html" data-nsd-label-uuid="32a4ed93-3797-4318-9475-2065eb6fd480" class="list-group-item list-group-action">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Node</a>
-            <a href="index.html" data-nsd-label-uuid="2a87720a-3b93-43bc-9d2b-55b470c63814" class="list-group-item list-group-action active">
+            <a href="index.html" data-nsd-label-uuid="eb085f55-fb2c-411f-831e-7f3a419238b3" class="list-group-item list-group-action active">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Page</a>
-            <a href="../Point/index.html" data-nsd-label-uuid="5d2fb0dc-57f6-40f0-9f1f-efaeab6f0e3a" class="list-group-item list-group-action">
+            <a href="../Point/index.html" data-nsd-label-uuid="743326f5-7fad-47d9-b753-f7fa74e5dfd1" class="list-group-item list-group-action">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Point</a>
-            <a href="../Root/index.html" data-nsd-label-uuid="c8f49d1a-6ca0-45ff-9d78-d78995fdfef3" class="list-group-item list-group-action">
+            <a href="../Root/index.html" data-nsd-label-uuid="af32d37b-1e54-4380-9272-9a38866cfccc" class="list-group-item list-group-action">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Root</a>
           </div>
         </div>
-        <div data-nsd-label-uuid="63928b48-cfcd-40d0-8807-174f01b337b5" data-nsd-action-uris="uuid:63928b48-cfcd-40d0-8807-174f01b337b5" class="col nsd-app-content-panel">
+        <div data-nsd-label-uuid="e747e1f5-d67b-42bb-bef2-d89e73e6e49e" data-nsd-action-uris="uuid:e747e1f5-d67b-42bb-bef2-d89e73e6e49e" class="col nsd-app-content-panel">
           <div class="container-fluid">
             <div class="row nsd-app-content-panel-breadcrumb-row">
               <div class="col">
                 <nav aria-label="breadcrumb" class="nsd-app-content-panel-breadcrumb">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                      <a href="index.html" data-nsd-label-uuid="2a87720a-3b93-43bc-9d2b-55b470c63814">
+                      <a href="index.html" data-nsd-label-uuid="eb085f55-fb2c-411f-831e-7f3a419238b3">
                         <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Page</a>
                     </li>
-                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="63928b48-cfcd-40d0-8807-174f01b337b5"><img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif" class="nsd-app-label-icon">Inheritance</span>
+                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="e747e1f5-d67b-42bb-bef2-d89e73e6e49e"><img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif" class="nsd-app-label-icon">Inheritance</span>
                     </li>
                   </ol>
                 </nav>
@@ -148,7 +156,7 @@ window.nsdJsTreeSearchCallback = function(str, node) {
             </div>
             <div class="row nsd-app-content-panel-title-and-items-row">
               <div class="col-auto">
-                <h1><span data-nsd-label-uuid="63928b48-cfcd-40d0-8807-174f01b337b5" class="nsd-app-content-panel-title"><img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif" class="nsd-app-label-icon">Inheritance</span>
+                <h1><span data-nsd-label-uuid="e747e1f5-d67b-42bb-bef2-d89e73e6e49e" class="nsd-app-content-panel-title"><img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EGenericSuperType.gif" class="nsd-app-label-icon">Inheritance</span>
                 </h1>
               </div>
             </div>
@@ -156,11 +164,11 @@ window.nsdJsTreeSearchCallback = function(str, node) {
               <div class="col">
                 <div class="container-fluid">
                   <div class="row">
-                    <div data-nsd-action-uris="uuid:47e1d2ab-6216-4466-9d8f-ea98d0c5ef7f" class="col">
+                    <div data-nsd-action-uris="uuid:848a7e42-ded7-424a-8c5c-fa337ee9b546" class="col">
                       <div class="container-fluid">
                         <div class="row nsd-app-content-panel-title-and-items-row">
                           <div class="col-auto">
-                            <h2><span data-nsd-label-uuid="47e1d2ab-6216-4466-9d8f-ea98d0c5ef7f" class="nsd-app-content-panel-title">Supertypes</span>
+                            <h2><span data-nsd-label-uuid="848a7e42-ded7-424a-8c5c-fa337ee9b546" class="nsd-app-content-panel-title">Supertypes</span>
                             </h2>
                           </div>
                         </div>

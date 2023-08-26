@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="EN">
   <head>
-    <title>model</title>
+    <title>Graph</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -89,10 +89,12 @@ window.nsdJsTreeSearchCallback = function(str, node) {
       </div>
       <div class="row">
         <div class="col nsd-app-navbar">
-          <ul class="navbar navbar-light navbar-expand-lg"><span data-nsd-label-uuid="8deb3a71-b8fd-4894-85af-61b76ad55f7e" class="navbar-brand"><img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EPackage.gif" class="nsd-app-label-icon">model</span>
-            <button type="button" data-toggle="collapse" data-target="#nsd_q0" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+          <ul class="navbar navbar-light navbar-expand-lg">
+            <a href="index.html" data-nsd-label-uuid="8deb3a71-b8fd-4894-85af-61b76ad55f7e" class="navbar-brand">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EPackage.gif" class="nsd-app-label-icon">model</a>
+            <button type="button" data-toggle="collapse" data-target="#nsd_fo" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
             </button>
-            <div id="nsd_q0" class="collapse navbar-collapse">
+            <div id="nsd_fo" class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                   <a href="classifiers.html" data-nsd-label-uuid="f75e34da-9506-488e-af73-ddbeb84128aa" class="nav-link">Classifiers</a>
@@ -100,9 +102,7 @@ window.nsdJsTreeSearchCallback = function(str, node) {
                 <li class="nav-item">
                   <a href="diagram.html" data-nsd-label-uuid="2ac81e43-c3a2-480b-a3b3-caab049d3bd0" class="nav-link"><span class="fas fa-project-diagram nsd-app-label-icon"></span>Diagram</a>
                 </li>
-                <li class="nav-item">
-                  <a href="graph.html" data-nsd-label-uuid="084ee1f9-fd36-4d85-9e50-c231f0735df7" class="nav-link">
-                    <img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/external-diagram-seo-media-dreamstale-lineal-dreamstale.png" class="nsd-app-label-icon">Graph</a>
+                <li class="nav-item"><span data-nsd-label-uuid="084ee1f9-fd36-4d85-9e50-c231f0735df7" class="navbar-text"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/external-diagram-seo-media-dreamstale-lineal-dreamstale.png" class="nsd-app-label-icon">Graph</span>
                 </li>
               </ul>
             </div>
@@ -136,11 +136,51 @@ window.nsdJsTreeSearchCallback = function(str, node) {
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Root</a>
           </div>
         </div>
-        <div data-nsd-label-uuid="8deb3a71-b8fd-4894-85af-61b76ad55f7e" data-nsd-action-uris="uuid:8deb3a71-b8fd-4894-85af-61b76ad55f7e" class="col nsd-app-content-panel">
+        <div data-nsd-label-uuid="084ee1f9-fd36-4d85-9e50-c231f0735df7" data-nsd-action-uris="uuid:084ee1f9-fd36-4d85-9e50-c231f0735df7" class="col nsd-app-content-panel">
           <div class="container-fluid">
+            <div class="row nsd-app-content-panel-title-and-items-row">
+              <div class="col-auto">
+                <h1><span data-nsd-label-uuid="084ee1f9-fd36-4d85-9e50-c231f0735df7" class="nsd-app-content-panel-title"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/external-diagram-seo-media-dreamstale-lineal-dreamstale.png" class="nsd-app-label-icon">Graph</span>
+                </h1>
+              </div>
+            </div>
             <div class="row nsd-app-content-panel-content-row">
               <div class="col">
-                <div class="container-fluid"></div>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col"><div id="graph-container-12" class="row" style="height:80vh;width:100%">
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var dom = document.getElementById("graph-container-12");
+		var myChart = echarts.init(dom, null, {
+			render: "canvas",
+			useDirtyRect: false
+		});
+		var option = {"series":[{"type":"graph","emphasis":{"focus":"adjacency"},"data":[{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","name":"Connection","value":{"externalLink":"references/eClassifiers/Connection/index.html"}},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","name":"Document","value":{"externalLink":"references/eClassifiers/Document/index.html"}},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","name":"Geometry","value":{"externalLink":"references/eClassifiers/Geometry/index.html"}},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","name":"Layer","value":{"externalLink":"references/eClassifiers/Layer/index.html"}},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","name":"LayerElement","value":{"externalLink":"references/eClassifiers/LayerElement/index.html"}},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","name":"Model","value":{"externalLink":"references/eClassifiers/Model/index.html"}},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","name":"ModelElement","value":{"externalLink":"references/eClassifiers/ModelElement/index.html"}},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","name":"Node","value":{"externalLink":"references/eClassifiers/Node/index.html"}},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","name":"Page","value":{"externalLink":"references/eClassifiers/Page/index.html"}},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","name":"Point","value":{"externalLink":"references/eClassifiers/Point/index.html"}},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","name":"Root","value":{"externalLink":"references/eClassifiers/Root/index.html"}}],"symbolSize":16,"roam":true,"layout":"force","links":[{"source":0,"target":4},{"source":0,"target":7},{"source":1,"target":8},{"source":2,"target":9},{"source":3,"target":4},{"source":3,"target":6},{"source":4,"target":2},{"source":4,"target":6},{"source":5,"target":10},{"source":6,"target":8},{"source":7,"target":0},{"source":7,"target":3},{"source":7,"target":4},{"source":8,"target":5},{"source":10,"target":3},{"source":10,"target":6}],"draggable":true,"label":{"show":true,"position":"right"},"lineStyle":{"color":"source","curveness":0},"force":{"repulsion":200,"gravity":0.1,"edgeLength":200}}]};
+		option.tooltip = {};
+		option.series[0].tooltip = {
+			formatter: function(arg) {
+				return arg.value ? arg.value.description : null;
+			}
+		};
+		myChart.setOption(option);
+		myChart.on("click", function(params) {
+			if (params.value) {
+				if (params.value.link) {
+					window.open(params.value.link, "_self");
+				} else if (params.value.externalLink) {
+					window.open(params.value.externalLink);
+				}
+			}
+		});
+		window.addEventListener("resize", myChart.resize);
+	});
+
+</script>
+</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
