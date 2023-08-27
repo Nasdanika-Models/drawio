@@ -101,7 +101,7 @@ public class TestDrawioModelDocGen {
 		
 		WidgetFactory execProcessor = null;
 		Collection<Throwable> resolveFailures = new ArrayList<>();		
-		URI baseActionURI = URI.createURI("https://drawio.models.nasdanika.org/");
+		URI baseActionURI = URI.createURI("local://drawio.models.nasdanika.org/");
 		
 		Map<EPackage, URI> packageURIMap = Map.ofEntries(
 			Map.entry(EcorePackage.eINSTANCE, URI.createURI("https://ecore.models.nasdanika.org/")),			
