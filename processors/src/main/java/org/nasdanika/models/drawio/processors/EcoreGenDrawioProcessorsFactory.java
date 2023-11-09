@@ -2,9 +2,8 @@ package org.nasdanika.models.drawio.processors;
 
 import org.nasdanika.common.Context;
 import org.nasdanika.models.ecore.graph.processors.EPackageNodeProcessorFactory;
-import org.nasdanika.ncore.NcorePackage;
 
-@EPackageNodeProcessorFactory(nsURI = NcorePackage.eNS_URI)
+@EPackageNodeProcessorFactory(nsURI = DrawioPackage.eNS_URI)
 public class EcoreGenDrawioProcessorsFactory {
 
 	private Context context;
