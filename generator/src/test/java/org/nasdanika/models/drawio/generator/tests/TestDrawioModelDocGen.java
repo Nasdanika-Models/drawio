@@ -46,36 +46,17 @@ import org.nasdanika.html.model.app.gen.ActionSiteGenerator;
 import org.nasdanika.html.model.app.graph.WidgetFactory;
 import org.nasdanika.html.model.app.graph.emf.EObjectReflectiveProcessorFactoryProvider;
 import org.nasdanika.models.drawio.processors.EcoreGenDrawioProcessorsFactory;
+import org.nasdanika.models.echarts.graph.GraphPackage;
 import org.nasdanika.models.ecore.graph.EcoreGraphFactory;
+import org.nasdanika.models.ecore.graph.processors.EcoreActionGenerator;
 import org.nasdanika.models.ecore.graph.processors.EcoreNodeProcessorFactory;
 import org.nasdanika.ncore.NcorePackage;
 
-/**
- * Tests Ecore -> Graph -> Processor -> actions generation
- * @author Pavel
- *
- */
 public class TestDrawioModelDocGen {
 	
 	@Test
 	public void testGenerateDrawioModelDoc() throws IOException, DiagnosticException {
-		List<EPackage> ePackages = Arrays.asList(EcorePackage.eINSTANCE, NcorePackage.eINSTANCE, ModelPackage.eINSTANCE);
 		ProgressMonitor progressMonitor = new NullProgressMonitor(); // new PrintStreamProgressMonitor();
-		Transformer<EObject,Element> graphFactory = new Transformer<>(new EcoreGraphFactory());
-		Map<EObject, Element> graph = graphFactory.transform(ePackages, false, progressMonitor);
-
-		NopEndpointProcessorConfigFactory<WidgetFactory> configFactory = new NopEndpointProcessorConfigFactory<>() {
-			
-			@Override
-			protected boolean isPassThrough(Connection connection) {
-				return false;
-			}
-			
-		};
-		
-		Transformer<Element,ProcessorConfig> processorConfigTransformer = new Transformer<>(configFactory);				
-		Map<Element, ProcessorConfig> configs = processorConfigTransformer.transform(graph.values(), false, progressMonitor);
-		
 		MutableContext context = Context.EMPTY_CONTEXT.fork();
 		context.register(DiagramGenerator.class, new PlantUMLDiagramGenerator());
 		Consumer<Diagnostic> diagnosticConsumer = d -> d.dump(System.out, 0);
@@ -94,76 +75,23 @@ public class TestDrawioModelDocGen {
 				},
 				diagnosticConsumer,
 				ecoreGenExecProcessorFactory);
-		
-		EObjectNodeProcessorReflectiveFactory<WidgetFactory, WidgetFactory> eObjectNodeProcessorReflectiveFactory = new EObjectNodeProcessorReflectiveFactory<>(ecoreNodeProcessorFactory);
-		EObjectReflectiveProcessorFactoryProvider eObjectReflectiveProcessorFactoryProvider = new EObjectReflectiveProcessorFactoryProvider(eObjectNodeProcessorReflectiveFactory);
-		Map<Element, ProcessorInfo<Object>> registry = eObjectReflectiveProcessorFactoryProvider.getFactory().createProcessors(configs.values(), false, progressMonitor);
-		
-		WidgetFactory execProcessor = null;
-		Collection<Throwable> resolveFailures = new ArrayList<>();		
-		URI baseActionURI = URI.createURI("local://drawio.models.nasdanika.org/");
-		
-		Map<EPackage, URI> packageURIMap = Map.ofEntries(
-			Map.entry(EcorePackage.eINSTANCE, URI.createURI("https://ecore.models.nasdanika.org/")),			
-			Map.entry(NcorePackage.eINSTANCE, URI.createURI("https://ncore.models.nasdanika.org/")),			
-			Map.entry(ModelPackage.eINSTANCE, baseActionURI)	
-		);
-		
-		for (EPackage topLevelPackage: ePackages) {
-			for (Entry<Element, ProcessorInfo<Object>> re: registry.entrySet()) {
-				Element element = re.getKey();
-				if (element instanceof EObjectNode) {
-					EObjectNode eObjNode = (EObjectNode) element;
-					EObject target = eObjNode.get();
-					if (target == topLevelPackage) {
-						ProcessorInfo<Object> info = re.getValue();
-						Object processor = info.getProcessor();
-						if (processor instanceof WidgetFactory) {
-							WidgetFactory widgetFactoryNodeProcessor = (WidgetFactory) processor;
-							widgetFactoryNodeProcessor.resolve(packageURIMap.get(topLevelPackage), progressMonitor);
-							
-							if (topLevelPackage == ModelPackage.eINSTANCE) { 							
-								execProcessor = widgetFactoryNodeProcessor;
-							}
-						}
-					}
-				}
-			}			
-		}
-		
-		if (!resolveFailures.isEmpty()) {
-			NasdanikaException ne = new NasdanikaException("Theres's been " + resolveFailures.size() +  " failures during URI resolution: " + resolveFailures);
-			for (Throwable failure: resolveFailures) {
-				ne.addSuppressed(failure);
-			}
-			throw ne;
-		}								
-		
-		ResourceSet actionModelsResourceSet = new ResourceSetImpl();
-		actionModelsResourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION, new XMIResourceFactoryImpl());
-		
+
 		File actionModelsDir = new File("target\\action-models\\");
 		actionModelsDir.mkdirs();
-		
 		File output = new File(actionModelsDir, "drawio.xmi");
-		Resource actionModelResource = actionModelsResourceSet.createResource(URI.createFileURI(output.getAbsolutePath()));
-		Collection<Label> labels = execProcessor.createLabelsSupplier().call(progressMonitor, diagnosticConsumer);
-		for (Label label: labels) {
-			if (label instanceof Link) {
-				Link link = (Link) label;
-				String location = link.getLocation();
-				if (!org.nasdanika.common.Util.isBlank(location)) {
-					URI uri = URI.createURI(location);
-					if (!uri.isRelative()) {
-						link.setLocation("${base-uri}" + uri.deresolve(baseActionURI, true, true, true).toString());
-					}
-				}
-			}
-		}
-						
-		actionModelResource.getContents().addAll(labels);
-		actionModelResource.save(null);
-				
+
+		Map<EPackage, URI> packageURIMap = Map.ofEntries(
+			Map.entry(EcorePackage.eINSTANCE, URI.createURI("https://ecore.models.nasdanika.org/")),			
+			Map.entry(NcorePackage.eINSTANCE, URI.createURI("https://ncore.models.nasdanika.org/"))	
+		);
+		
+		EcoreActionGenerator eCoreActionGenerator = new EcoreActionGenerator(
+				ModelPackage.eINSTANCE, 
+				packageURIMap, 
+				ecoreNodeProcessorFactory);		
+
+		eCoreActionGenerator.generateActionModel(diagnosticConsumer, output, progressMonitor);
+		
 		String rootActionResource = "actions.yml";
 		URI rootActionURI = URI.createFileURI(new File(rootActionResource).getAbsolutePath());//.appendFragment("/");
 		

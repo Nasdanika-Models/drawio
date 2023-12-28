@@ -2,537 +2,707 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" >
   <url>
     <loc>https://drawio.models.nasdanika.org/circular-layout-graph-with-dependencies-and-subpackages.html</loc>
-    <lastmod>2023-09-23T09:15:24.323-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.603-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/circular-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.317-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.592-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/classifiers.html</loc>
-    <lastmod>2023-09-23T09:15:24.307-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.580-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/default-graph-with-dependencies-and-subpackages.html</loc>
-    <lastmod>2023-09-23T09:15:24.321-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.599-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/default-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.315-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.589-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/diagram.html</loc>
-    <lastmod>2023-09-23T09:15:24.312-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.587-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/force-layout-graph-with-dependencies-and-subpackages.html</loc>
-    <lastmod>2023-09-23T09:15:24.325-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.607-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/force-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.319-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.595-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/glossary.html</loc>
-    <lastmod>2023-09-23T09:15:24.334-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.620-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/index.html</loc>
-    <lastmod>2023-09-23T09:15:24.103-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.072-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Connection/attributes.html</loc>
-    <lastmod>2023-09-23T09:15:24.111-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.090-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Connection/circular-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.127-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.112-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Connection/default-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.125-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.109-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Connection/diagram.html</loc>
-    <lastmod>2023-09-23T09:15:24.123-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.105-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Connection/force-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.129-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.116-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Connection/index.html</loc>
-    <lastmod>2023-09-23T09:15:24.108-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.085-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Connection/inheritance.html</loc>
-    <lastmod>2023-09-23T09:15:24.115-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.095-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Connection/load-specification.html</loc>
-    <lastmod>2023-09-23T09:15:24.131-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.120-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Connection/operations.html</loc>
+    <lastmod>2023-12-28T06:41:45.098-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Connection/references.html</loc>
-    <lastmod>2023-09-23T09:15:24.120-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.102-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Document/attributes.html</loc>
-    <lastmod>2023-09-23T09:15:24.136-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.130-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Document/circular-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.147-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.174-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Document/default-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.145-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.170-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Document/diagram.html</loc>
-    <lastmod>2023-09-23T09:15:24.143-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.166-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Document/force-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.149-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.185-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Document/index.html</loc>
-    <lastmod>2023-09-23T09:15:24.134-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.127-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Document/inheritance.html</loc>
-    <lastmod>2023-09-23T09:15:24.137-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.151-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Document/load-specification.html</loc>
-    <lastmod>2023-09-23T09:15:24.151-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.189-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Document/operations.html</loc>
+    <lastmod>2023-12-28T06:41:45.156-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Document/references/eStructuralFeatures/source/index.html</loc>
+    <lastmod>2023-12-28T06:41:45.147-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Document/references.html</loc>
-    <lastmod>2023-09-23T09:15:24.139-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.160-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Geometry/attributes.html</loc>
-    <lastmod>2023-09-23T09:15:24.155-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.196-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Geometry/circular-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.167-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.272-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Geometry/default-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.165-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.270-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Geometry/diagram.html</loc>
-    <lastmod>2023-09-23T09:15:24.163-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.267-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Geometry/force-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.170-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.275-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Geometry/index.html</loc>
-    <lastmod>2023-09-23T09:15:24.153-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.194-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Geometry/inheritance.html</loc>
-    <lastmod>2023-09-23T09:15:24.157-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.199-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Geometry/load-specification.html</loc>
-    <lastmod>2023-09-23T09:15:24.172-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.277-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Geometry/references.html</loc>
-    <lastmod>2023-09-23T09:15:24.160-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.264-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Layer/attributes.html</loc>
-    <lastmod>2023-09-23T09:15:24.176-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.281-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Layer/circular-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.185-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.299-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Layer/default-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.184-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.295-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Layer/diagram.html</loc>
-    <lastmod>2023-09-23T09:15:24.182-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.291-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Layer/force-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.187-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.304-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Layer/index.html</loc>
-    <lastmod>2023-09-23T09:15:24.174-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.279-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Layer/inheritance.html</loc>
-    <lastmod>2023-09-23T09:15:24.178-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.282-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Layer/load-specification.html</loc>
-    <lastmod>2023-09-23T09:15:24.189-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.307-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Layer/operations.html</loc>
+    <lastmod>2023-12-28T06:41:45.285-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Layer/references.html</loc>
-    <lastmod>2023-09-23T09:15:24.180-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.287-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/LayerElement/attributes.html</loc>
-    <lastmod>2023-09-23T09:15:24.192-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.314-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/LayerElement/circular-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.201-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.334-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/LayerElement/default-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.199-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.331-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/LayerElement/diagram.html</loc>
-    <lastmod>2023-09-23T09:15:24.198-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.325-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/LayerElement/force-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.202-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.338-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/LayerElement/index.html</loc>
-    <lastmod>2023-09-23T09:15:24.191-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.311-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/LayerElement/inheritance.html</loc>
-    <lastmod>2023-09-23T09:15:24.194-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.316-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/LayerElement/load-specification.html</loc>
-    <lastmod>2023-09-23T09:15:24.204-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.340-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/LayerElement/operations.html</loc>
+    <lastmod>2023-12-28T06:41:45.318-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/LayerElement/references.html</loc>
-    <lastmod>2023-09-23T09:15:24.195-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.321-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Model/circular-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.214-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.354-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Model/default-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.213-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.352-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Model/diagram.html</loc>
-    <lastmod>2023-09-23T09:15:24.211-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.350-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Model/force-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.217-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.356-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Model/index.html</loc>
-    <lastmod>2023-09-23T09:15:24.206-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.343-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Model/inheritance.html</loc>
-    <lastmod>2023-09-23T09:15:24.207-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.345-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Model/load-specification.html</loc>
-    <lastmod>2023-09-23T09:15:24.219-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.358-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Model/references.html</loc>
-    <lastmod>2023-09-23T09:15:24.208-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.348-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/ModelElement/attributes.html</loc>
-    <lastmod>2023-09-23T09:15:24.222-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.363-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/ModelElement/circular-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.233-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.385-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/ModelElement/default-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.231-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.382-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/ModelElement/diagram.html</loc>
-    <lastmod>2023-09-23T09:15:24.229-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.378-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/ModelElement/force-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.235-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.388-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/ModelElement/index.html</loc>
-    <lastmod>2023-09-23T09:15:24.221-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.361-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/ModelElement/inheritance.html</loc>
-    <lastmod>2023-09-23T09:15:24.224-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.366-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/ModelElement/operations.html</loc>
+    <lastmod>2023-12-28T06:41:45.369-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/ModelElement/references.html</loc>
-    <lastmod>2023-09-23T09:15:24.225-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.372-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Node/attributes.html</loc>
-    <lastmod>2023-09-23T09:15:24.241-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.395-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Node/circular-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.250-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.413-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Node/default-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.249-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.411-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Node/diagram.html</loc>
-    <lastmod>2023-09-23T09:15:24.247-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.408-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Node/force-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.252-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.415-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Node/index.html</loc>
-    <lastmod>2023-09-23T09:15:24.238-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.391-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Node/inheritance.html</loc>
-    <lastmod>2023-09-23T09:15:24.243-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.398-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Node/load-specification.html</loc>
-    <lastmod>2023-09-23T09:15:24.254-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.418-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Node/operations.html</loc>
+    <lastmod>2023-12-28T06:41:45.401-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Node/references.html</loc>
-    <lastmod>2023-09-23T09:15:24.245-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.405-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Page/attributes.html</loc>
-    <lastmod>2023-09-23T09:15:24.257-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.423-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Page/circular-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.267-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.459-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Page/default-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.265-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.457-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Page/diagram.html</loc>
-    <lastmod>2023-09-23T09:15:24.263-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.436-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Page/force-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.269-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.463-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Page/index.html</loc>
-    <lastmod>2023-09-23T09:15:24.256-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.421-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Page/inheritance.html</loc>
-    <lastmod>2023-09-23T09:15:24.258-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.425-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Page/load-specification.html</loc>
-    <lastmod>2023-09-23T09:15:24.271-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.467-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Page/operations.html</loc>
+    <lastmod>2023-12-28T06:41:45.427-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Page/references/eStructuralFeatures/links/index.html</loc>
+    <lastmod>2023-12-28T06:41:45.432-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Page/references.html</loc>
-    <lastmod>2023-09-23T09:15:24.260-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.429-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Point/attributes.html</loc>
-    <lastmod>2023-09-23T09:15:24.275-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.472-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Point/circular-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.282-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.483-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Point/default-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.280-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.480-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Point/diagram.html</loc>
-    <lastmod>2023-09-23T09:15:24.278-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.478-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Point/force-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.284-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.485-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Point/index.html</loc>
-    <lastmod>2023-09-23T09:15:24.273-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.470-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Point/inheritance.html</loc>
-    <lastmod>2023-09-23T09:15:24.276-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.475-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Point/load-specification.html</loc>
-    <lastmod>2023-09-23T09:15:24.287-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.487-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Root/attributes.html</loc>
-    <lastmod>2023-09-23T09:15:24.292-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.494-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Root/circular-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.302-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.507-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Root/default-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.300-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.505-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Root/diagram.html</loc>
-    <lastmod>2023-09-23T09:15:24.298-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.503-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Root/force-layout-graph.html</loc>
-    <lastmod>2023-09-23T09:15:24.303-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.509-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Root/index.html</loc>
-    <lastmod>2023-09-23T09:15:24.290-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.491-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Root/inheritance.html</loc>
-    <lastmod>2023-09-23T09:15:24.294-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.495-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Root/load-specification.html</loc>
-    <lastmod>2023-09-23T09:15:24.305-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.511-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Root/operations.html</loc>
+    <lastmod>2023-12-28T06:41:45.498-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Root/references.html</loc>
-    <lastmod>2023-09-23T09:15:24.295-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.500-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/SemanticElement/circular-layout-graph.html</loc>
+    <lastmod>2023-12-28T06:41:45.534-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/SemanticElement/default-graph.html</loc>
+    <lastmod>2023-12-28T06:41:45.531-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/SemanticElement/diagram.html</loc>
+    <lastmod>2023-12-28T06:41:45.528-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/SemanticElement/force-layout-graph.html</loc>
+    <lastmod>2023-12-28T06:41:45.537-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/SemanticElement/index.html</loc>
+    <lastmod>2023-12-28T06:41:45.514-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/SemanticElement/references/eStructuralFeatures/semanticMappings/index.html</loc>
+    <lastmod>2023-12-28T06:41:45.524-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/SemanticElement/references.html</loc>
+    <lastmod>2023-12-28T06:41:45.515-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/SemanticMapping/attributes.html</loc>
+    <lastmod>2023-12-28T06:41:45.542-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/SemanticMapping/circular-layout-graph.html</loc>
+    <lastmod>2023-12-28T06:41:45.554-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/SemanticMapping/default-graph.html</loc>
+    <lastmod>2023-12-28T06:41:45.552-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/SemanticMapping/diagram.html</loc>
+    <lastmod>2023-12-28T06:41:45.550-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/SemanticMapping/force-layout-graph.html</loc>
+    <lastmod>2023-12-28T06:41:45.556-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/SemanticMapping/index.html</loc>
+    <lastmod>2023-12-28T06:41:45.540-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/SemanticMapping/load-specification.html</loc>
+    <lastmod>2023-12-28T06:41:45.558-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/SemanticMapping/references/eStructuralFeatures/pageElement/index.html</loc>
+    <lastmod>2023-12-28T06:41:45.547-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Tag/attributes.html</loc>
+    <lastmod>2023-12-28T06:41:45.563-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Tag/circular-layout-graph.html</loc>
+    <lastmod>2023-12-28T06:41:45.574-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Tag/default-graph.html</loc>
+    <lastmod>2023-12-28T06:41:45.572-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Tag/diagram.html</loc>
+    <lastmod>2023-12-28T06:41:45.570-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Tag/force-layout-graph.html</loc>
+    <lastmod>2023-12-28T06:41:45.576-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Tag/index.html</loc>
+    <lastmod>2023-12-28T06:41:45.562-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Tag/inheritance.html</loc>
+    <lastmod>2023-12-28T06:41:45.565-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Tag/load-specification.html</loc>
+    <lastmod>2023-12-28T06:41:45.578-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://drawio.models.nasdanika.org/references/eClassifiers/Tag/references.html</loc>
+    <lastmod>2023-12-28T06:41:45.567-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://drawio.models.nasdanika.org/search.html</loc>
-    <lastmod>2023-09-23T09:15:24.329-04:00</lastmod>
+    <lastmod>2023-12-28T06:41:45.614-05:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>

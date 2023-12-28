@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="EN">
+  <head>
+    <title>Diagram</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/themes/default/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.1.0/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.css">
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/dark-head.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/jstree.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/components/table.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/components/table.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9BRJVLK8CC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9BRJVLK8CC');
+</script>    
+
+<script src="../../../search-documents.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>
+
+<script>
+// Script for full-text search of JsTree
+
+window.nsdJsTreeSearchCallback = function(str, node) { 
+    var sf = new $.vakata.search(str, true, { caseSensitive : false, fuzzy : false }); 
+    if (sf.search(node.text).isMatch) {
+		return true;
+	} 
+    let searchResult = this.search(str); 
+    for (const sr in searchResult) {
+        if (searchResult[sr].ref === node.original['data-nsd-label-uuid']) {
+            return true;
+        } 
+    } 
+    return false; 
+}.bind(lunr(function () {
+			  this.ref('id');
+			  this.field('title');
+			  this.field('content');
+
+			  for (const key in searchDocuments) {
+				  let doc = searchDocuments[key];
+				this.add({
+					id: doc['action-uuid'],
+					title: doc.title,
+					path: doc.path,
+					content: doc.content
+				});  
+			  }
+			}));
+</script>
+</head>
+  <body>
+    <div class="container-fluid nsd-app-container">
+      <div class="row">
+        <div class="col nsd-app-header">
+          <a href="https://github.com/Nasdanika-Models" data-nsd-label-uuid="f008c042-c8fc-4002-8547-76d64f8122d2" class="nsd-app-header-title">
+            <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon">Nasdanika Models</a>
+          <ul class="nav nsd-app-header-navs">
+            <li class="nav-item">
+              <a href="../../../search.html" data-nsd-label-uuid="8607b25e-cce2-412e-b869-0b34f4c83e24" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
+            </li>
+            <li class="nav-item">
+              <a href="../../../glossary.html" data-nsd-label-uuid="2ecd642b-9a41-4551-bb0c-ed446eb72b4e" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nsd-app-navbar">
+          <ul class="navbar navbar-light navbar-expand-lg">
+            <a href="../../../index.html" data-nsd-label-uuid="89429a6d-d87a-4fc8-a658-76812f197658" class="navbar-brand">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EPackage.gif" class="nsd-app-label-icon">model</a>
+            <button type="button" data-toggle="collapse" data-target="#nsd_15t" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="nsd_15t" class="collapse navbar-collapse">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a href="../../../classifiers.html" data-nsd-label-uuid="556f8c9b-567b-44ed-a6d5-09370b75cab8" class="nav-link">Classifiers</a>
+                </li>
+                <li class="nav-item">
+                  <a href="../../../diagram.html" data-nsd-label-uuid="a369ff96-1cde-4789-8335-b2aee777fa92" class="nav-link"><span class="fas fa-project-diagram nsd-app-label-icon"></span>Diagram</a>
+                </li>
+                <li class="nav-item">
+                  </li><li data-nsd-label-uuid="8c59bff0-42aa-4a6a-b85d-5ae7f892eb07" class="dropdown">
+                    <a role="button" data-toggle="dropdown" class="nav-link dropdown-toggle">
+                      <img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/external-diagram-seo-media-dreamstale-lineal-dreamstale.png" class="nsd-app-label-icon">Graphs</a>
+                    <div class="dropdown-menu">
+                      <a href="../../../default-graph.html" data-nsd-label-uuid="ccd6b3b9-5022-497c-be87-4e8e6b2875b1" class="dropdown-item">Default Graph</a>
+                      <a href="../../../circular-layout-graph.html" data-nsd-label-uuid="145d1981-b17c-4a8e-b11b-cf2e55246296" class="dropdown-item">Circular Graph</a>
+                      <a href="../../../force-layout-graph.html" data-nsd-label-uuid="defb8cc0-1726-49f6-99f7-20f1a646b77b" class="dropdown-item">Force Graph</a>
+                      <div title="With dependencies and sub-packages" class="dropdown-divider"></div>
+                      <a href="../../../default-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="072a416f-6ae1-4a40-9716-047335f6ed02" class="dropdown-item">Default Graph</a>
+                      <a href="../../../circular-layout-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="827943df-4835-433c-859a-f6b23e8e3646" class="dropdown-item">Circular Graph</a>
+                      <a href="../../../force-layout-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="4f397047-0c86-47c6-8cdf-25411fcaf832" class="dropdown-item">Force Graph</a>
+                    </div>
+                  </li>
+                
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <div class="row nsd-app-content-row">
+        <div class="col nsd-app-navigation-panel">
+          <div class="list-group list-group-flush">
+            <a href="../Connection/index.html" data-nsd-label-uuid="7119f176-aad2-4a6f-b5ae-f7a94d2524ed" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Connection</a>
+            <a href="../Document/index.html" data-nsd-label-uuid="35ac849d-b5db-487f-8e39-b5c63a4a2a19" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Document</a>
+            <a href="../Geometry/index.html" data-nsd-label-uuid="d4491f1c-2919-4453-93e7-0f761bdf8688" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Geometry</a>
+            <a href="../Layer/index.html" data-nsd-label-uuid="90e3635d-4307-4376-a4c1-fc4064be7234" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Layer</a>
+            <a href="../LayerElement/index.html" data-nsd-label-uuid="716e4fcb-4cec-452f-8de7-243b5ce0fa36" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">LayerElement</a>
+            <a href="../Model/index.html" data-nsd-label-uuid="f6495afa-c2f1-4a62-a267-3e6a233b05b6" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Model</a>
+            <a href="../ModelElement/index.html" data-nsd-label-uuid="b65449f2-a35f-4056-98b9-99372018ac99" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"><i>ModelElement</i></a>
+            <a href="../Node/index.html" data-nsd-label-uuid="5ec3e634-7ece-46fb-9932-8c0022d3872a" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Node</a>
+            <a href="../Page/index.html" data-nsd-label-uuid="16c3904e-b4c3-41af-aed4-2b6f6f95e813" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Page</a>
+            <a href="../Point/index.html" data-nsd-label-uuid="43ea99c6-9425-4fe4-9615-e40cc3aa7871" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Point</a>
+            <a href="../Root/index.html" data-nsd-label-uuid="613e38bf-57ad-41cd-b784-3725492d8d95" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Root</a>
+            <a href="index.html" title="EClasses mapped/created from diagram elements may implement this interface to trace the elements they were mapped from" data-nsd-label-uuid="82cf61bd-d4e3-4c2c-ac0a-1bf9d8e3aa41" class="list-group-item list-group-action active">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EInterface.gif" class="nsd-app-label-icon"><i>SemanticElement</i></a>
+            <a href="../SemanticMapping/index.html" data-nsd-label-uuid="0d31729f-849e-4a4b-82af-3f53756092f2" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">SemanticMapping</a>
+            <a href="../Tag/index.html" data-nsd-label-uuid="67a842f9-3cb9-4abe-a707-e4d5472bf646" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Tag</a>
+          </div>
+        </div>
+        <div data-nsd-label-uuid="e7b83b35-308c-494c-9326-3198c99b5ef1" data-nsd-action-uris="uuid:e7b83b35-308c-494c-9326-3198c99b5ef1" class="col nsd-app-content-panel">
+          <div class="container-fluid">
+            <div class="row nsd-app-content-panel-breadcrumb-row">
+              <div class="col">
+                <nav aria-label="breadcrumb" class="nsd-app-content-panel-breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="index.html" title="EClasses mapped/created from diagram elements may implement this interface to trace the elements they were mapped from" data-nsd-label-uuid="82cf61bd-d4e3-4c2c-ac0a-1bf9d8e3aa41">
+                        <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EInterface.gif" class="nsd-app-label-icon"><i>SemanticElement</i></a>
+                    </li>
+                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="e7b83b35-308c-494c-9326-3198c99b5ef1"><span class="fas fa-project-diagram nsd-app-label-icon"></span>Diagram</span>
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+            <div class="row nsd-app-content-panel-title-and-items-row">
+              <div class="col-auto">
+                <h1><span data-nsd-label-uuid="e7b83b35-308c-494c-9326-3198c99b5ef1" class="nsd-app-content-panel-title"><span class="fas fa-project-diagram nsd-app-label-icon"></span>Diagram</span>
+                </h1>
+              </div>
+            </div>
+            <div class="row nsd-app-content-panel-content-row">
+              <div class="col">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col"><!--?xml version="1.0" encoding="us-ascii" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="258px" preserveAspectRatio="none" style="width:211px;height:258px;background:#FFFFFF;" version="1.1" viewBox="0 0 211 258" width="211px" zoomAndPan="magnify"><defs /><g><!--class DE_1l--><a href="" target="_top" title="EClasses mapped/created from diagram elements may implement this interface to trace the elements they were mapped from" xlink:actuate="onRequest" xlink:href="" xlink:show="new" xlink:title="EClasses mapped/created from diagram elements may implement this interface to trace the elements they were mapped from" xlink:type="simple"><g id="elem_DE_1l"><rect codeLine="1" fill="#DDDDDD" height="48" id="DE_1l" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="141" x="22.5" y="7" /><ellipse cx="37.5" cy="23" fill="#B4A7E5" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;" /><path d="M38.4531,19.6406 L38.4531,26.2969 L40.1719,26.2969 Q40.7813,26.2969 41.0469,26.5313 Q41.3125,26.7656 41.3125,27.1563 Q41.3125,27.5313 41.0469,27.7656 Q40.7813,28 40.1719,28 L35.0313,28 Q34.4219,28 34.1563,27.7656 Q33.8906,27.5313 33.8906,27.1406 Q33.8906,26.7656 34.1563,26.5313 Q34.4219,26.2969 35.0313,26.2969 L36.75,26.2969 L36.75,19.6406 L35.0313,19.6406 Q34.4219,19.6406 34.1563,19.4063 Q33.8906,19.1719 33.8906,18.7813 Q33.8906,18.4063 34.1563,18.1719 Q34.4219,17.9375 35.0313,17.9375 L40.1719,17.9375 Q40.7813,17.9375 41.0469,18.1719 Q41.3125,18.4063 41.3125,18.7813 Q41.3125,19.1719 41.0469,19.4063 Q40.7813,19.6406 40.1719,19.6406 L38.4531,19.6406 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="109" x="51.5" y="28.7285">SemanticElement</text><line style="stroke:#181818;stroke-width:0.5;" x1="23.5" x2="162.5" y1="39" y2="39" /><line style="stroke:#181818;stroke-width:1.0;" x1="23.5" x2="162.5" y1="47" y2="47" /></g></a><!--class DE_1m--><a href="../SemanticMapping/index.html" target="_top" title="../SemanticMapping/index.html" xlink:actuate="onRequest" xlink:href="../SemanticMapping/index.html" xlink:show="new" xlink:title="../SemanticMapping/index.html" xlink:type="simple"><g id="elem_DE_1m"><rect codeLine="4" fill="#F1F1F1" height="118.4375" id="DE_1m" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="172" x="7" y="133" /><ellipse cx="34.6" cy="149" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;" /><path d="M37.3656,144.875 Q37.5219,144.6563 37.7094,144.5469 Q37.8969,144.4375 38.1156,144.4375 Q38.4906,144.4375 38.725,144.7031 Q38.9594,144.9531 38.9594,145.5625 L38.9594,147.0156 Q38.9594,147.625 38.725,147.8906 Q38.4906,148.1563 38.1156,148.1563 Q37.7719,148.1563 37.5688,147.9531 Q37.3656,147.7656 37.2563,147.25 Q37.2094,146.8906 37.0219,146.7031 Q36.6938,146.3281 36.0844,146.1094 Q35.475,145.8906 34.85,145.8906 Q34.0844,145.8906 33.4438,146.2188 Q32.8188,146.5469 32.3188,147.2969 Q31.8344,148.0469 31.8344,149.0781 L31.8344,150.1719 Q31.8344,151.4063 32.725,152.2344 Q33.6156,153.0469 35.2094,153.0469 Q36.1469,153.0469 36.8031,152.7969 Q37.1938,152.6406 37.6156,152.2031 Q37.8813,151.9375 38.0219,151.8594 Q38.1781,151.7813 38.3813,151.7813 Q38.7094,151.7813 38.9594,152.0469 Q39.225,152.2969 39.225,152.6406 Q39.225,152.9844 38.8813,153.3906 Q38.3813,153.9688 37.5844,154.2969 Q36.5063,154.75 35.2094,154.75 Q33.6938,154.75 32.4906,154.125 Q31.5063,153.625 30.8188,152.5625 Q30.1313,151.4844 30.1313,150.2031 L30.1313,149.0469 Q30.1313,147.7188 30.7406,146.5781 Q31.3656,145.4219 32.4594,144.8125 Q33.5531,144.1875 34.7875,144.1875 Q35.5219,144.1875 36.1625,144.3594 Q36.8188,144.5156 37.3656,144.875 Z " fill="#000000" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="51.4" y="154.7285">SemanticMapping</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="178" y1="165" y2="165" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="13" y="183.5332">documentURI :</text><a href="https://ecore.models.nasdanika.org/references/eClassifiers/EString/index.html" target="_top" title="https://ecore.models.nasdanika.org/references/eClassifiers/EString/index.html" xlink:actuate="onRequest" xlink:href="https://ecore.models.nasdanika.org/references/eClassifiers/EString/index.html" xlink:show="new" xlink:title="https://ecore.models.nasdanika.org/references/eClassifiers/EString/index.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="46" x="109" y="183.5332">EString</text></a><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110" x="13" y="201.1426">modelElementID :</text><a href="https://ecore.models.nasdanika.org/references/eClassifiers/EString/index.html" target="_top" title="https://ecore.models.nasdanika.org/references/eClassifiers/EString/index.html" xlink:actuate="onRequest" xlink:href="https://ecore.models.nasdanika.org/references/eClassifiers/EString/index.html" xlink:show="new" xlink:title="https://ecore.models.nasdanika.org/references/eClassifiers/EString/index.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="46" x="127" y="201.1426">EString</text></a><a href="../SemanticMapping/references/eStructuralFeatures/pageElement/index.html" target="_top" title="An element may be marked as &quot;page-element&quot; to indicate that a particular page is about this element and shall be added to the list of element's representations" xlink:actuate="onRequest" xlink:href="../SemanticMapping/references/eStructuralFeatures/pageElement/index.html" xlink:show="new" xlink:title="An element may be marked as &quot;page-element&quot; to indicate that a particular page is about this element and shall be added to the list of element's representations" xlink:type="simple"><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="13" y="218.752">pageElement :</text><a href="https://ecore.models.nasdanika.org/references/eClassifiers/EBoolean/index.html" target="_top" title="https://ecore.models.nasdanika.org/references/eClassifiers/EBoolean/index.html" xlink:actuate="onRequest" xlink:href="https://ecore.models.nasdanika.org/references/eClassifiers/EBoolean/index.html" xlink:show="new" xlink:title="https://ecore.models.nasdanika.org/references/eClassifiers/EBoolean/index.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="61" x="108" y="218.752">EBoolean</text></a></a><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="13" y="236.3613">pageID :</text><a href="https://ecore.models.nasdanika.org/references/eClassifiers/EString/index.html" target="_top" title="https://ecore.models.nasdanika.org/references/eClassifiers/EString/index.html" xlink:actuate="onRequest" xlink:href="https://ecore.models.nasdanika.org/references/eClassifiers/EString/index.html" xlink:show="new" xlink:title="https://ecore.models.nasdanika.org/references/eClassifiers/EString/index.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="46" x="70" y="236.3613">EString</text></a><line style="stroke:#181818;stroke-width:1.0;" x1="8" x2="178" y1="243.4375" y2="243.4375" /></g></a><!--link DE_1l to DE_1m--><g id="link_DE_1l_DE_1m"><a href="references/eStructuralFeatures/semanticMappings/index.html" target="_top" title="A list of semantic mappings" xlink:actuate="onRequest" xlink:href="references/eStructuralFeatures/semanticMappings/index.html" xlink:show="new" xlink:title="A list of semantic mappings" xlink:type="simple"><path codeLine="11" d="M93,67.12 C93,87.45 93,99.9 93,126.83 " fill="none" id="DE_1l-DE_1m" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="93,55.12,89,61.12,93,67.12,97,61.12,93,55.12" style="stroke:#181818;stroke-width:1.0;" /><polygon fill="#181818" points="93,132.83,97,123.83,93,127.83,89,123.83,93,132.83" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="109" x="94" y="99.4951">semanticMappings</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="5" x="87.6953" y="122.1335">*</text></a></g><!--SRC=[jPDFQzmm4CNl_XJ3zX08sARNFHJQxXPowAKX9xEKYJHUY-YF6SaaOSbtxqXhf-jGoA749tdGlFSq-iduHDoZ8jZjVt-sW14sj-JG9wFsbXpvj07ekjF-kyKOAOB3SIJTAYPCfA7du40RF38we7D7tlGCnetdNqY3YM1UdLA0n6KnqDyM-Nc6HsAQ7Ohoo-40dtRbWrDLrzLBfNAEajQjqlwKBkEF9MtJj6_AhV6QdfeXEIkIfmf01pLbvxjVDx2LdY6bCMxRbbHWQbpGP6FZCMhqvW6RmCUMgPTyNb5igOp3z8OujllRn6iFc4k7WpWLhNcODxiFDXlnIBFNVpjz2y4I-fNLN9CXTl-SywMOn9fKcXZj3u5bOgbTnBkGFNtr2mW5dViC0Jy81Fc6SqzD2un2ZpGQ9VG9CvW0vSmi2IQBN8uFGXlUXsa6Rn56ho4EQ6sMHwr5FPCe35eJ4uH-sNaLWMcKjBB6P8AFWk4osm- -m8Bu-IbUr_KNs5nlPjQxxftHnlLDnDLyNy-ux2glB6_BJsmBRvkhFm00]--></g></svg></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nsd-app-footer">
+          <ul class="nav nsd-app-footer-navs">
+            <li class="nav-item">
+              <a href="https://github.com/Nasdanika-Models/drawio" data-nsd-label-uuid="8cd709a4-167d-415b-b581-ff9f58b4e61d" class="nav-link"><span class="fab fa-github nsd-app-label-icon"></span>Sources</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
