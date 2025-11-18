@@ -46,7 +46,7 @@ public class EcoreGenDrawioProcessorsFactory {
 //	)
 //	public EPackageNodeProcessor createEPackageProcessor(
 //			NodeProcessorConfig<WidgetFactory, WidgetFactory> config, 
-//			java.util.function.Function<ProgressMonitor, Action> prototypeProvider,
+//			java.util.function.BiFunction<EObject, ProgressMonitor, Action> prototypeProvider,
 //			BiConsumer<Label, ProgressMonitor> labelConfigurator,
 //			ProgressMonitor progressMonitor) {		
 //		return new EPackageNodeProcessor(config, context, prototypeProvider) {

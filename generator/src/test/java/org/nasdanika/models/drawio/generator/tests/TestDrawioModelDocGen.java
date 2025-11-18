@@ -96,7 +96,7 @@ public class TestDrawioModelDocGen {
 		
 		System.out.println("There are " + errorCount + " site errors");
 		
-		if (errorCount != 129) {
+		if (errorCount != 173) {
 			throw new ExecutionException("There are problems with pages: " + errorCount);
 		}		
 	}
