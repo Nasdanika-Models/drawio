@@ -6,7 +6,7 @@ import org.nasdanika.capability.CapabilityProvider;
 import org.nasdanika.capability.ServiceCapabilityFactory;
 import org.nasdanika.capability.emf.ResourceContentsHandler;
 import org.nasdanika.common.ProgressMonitor;
-import org.nasdanika.models.markdown.Document;
+import org.nasdanika.models.drawio.Document;
 
 /**
  * Provides an {@link OpenAIClient} instance.  
@@ -23,7 +23,7 @@ public class DrawioResourceContentsHandlerCapabilityFactory extends ServiceCapab
 	private boolean match(org.nasdanika.capability.emf.ResourceContentsHandler.Requirement handlerRequirement) {
 		return Document.class.equals(handlerRequirement.getContentsType())
 				&& handlerRequirement.getQualifierIndex() == 0
-				&& "md".equalsIgnoreCase(handlerRequirement.getQualifiers()[0]);
+				&& "drawio".equalsIgnoreCase(handlerRequirement.getQualifiers()[0]);
 	}
 
 	@Override

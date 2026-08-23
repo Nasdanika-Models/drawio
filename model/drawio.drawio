@@ -1,0 +1,35 @@
+<mxfile compressed="false" host="Electron">
+  <diagram id="b43fd873-ab12-46c4-a562-ad75f500a85b" name="drawio">
+    <mxGraphModel dx="2123" dy="1094" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="Node" link="references/eClassifiers/Node/index.html" id="aa88e31f-2703-4639-90f5-a690b8c2ca42">
+          <mxCell parent="1" vertex="1">
+            <mxGeometry height="30" width="120" x="130" y="40" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Document" link="references/eClassifiers/Document/index.html" id="d6d67220-5be8-4cc0-956d-8fdfadebaf59">
+          <mxCell parent="1" vertex="1">
+            <mxGeometry height="30" width="120" x="0.0028383700255290023" y="40" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Layer" link="references/eClassifiers/Layer/index.html" id="07456978-19c2-44e6-bd29-169d88886cb8">
+          <mxCell parent="1" vertex="1">
+            <mxGeometry height="30" width="120" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Page" link="references/eClassifiers/Page/index.html" id="2f53b0ac-da4e-4726-ba6d-8118d2a78da6">
+          <mxCell parent="1" vertex="1">
+            <mxGeometry height="30" width="120" y="80" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Connection" link="references/eClassifiers/Connection/index.html" id="b7689bda-1ba2-4e57-9b41-3dbcbb324cf0">
+          <mxCell parent="1" vertex="1">
+            <mxGeometry height="30" width="120" x="130" as="geometry" />
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

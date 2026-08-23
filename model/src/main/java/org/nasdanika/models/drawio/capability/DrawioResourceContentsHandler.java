@@ -11,14 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.nasdanika.capability.emf.ResourceEObjectContentsHandler;
-import org.nasdanika.models.markdown.Document;
-import org.nasdanika.models.markdown.MarkdownFactory;
-import org.nasdanika.models.markdown.loader.MarkdownVisitor;
-
-import com.vladsch.flexmark.ext.attributes.AttributesExtension;
-import com.vladsch.flexmark.ext.tables.TablesExtension;
-import com.vladsch.flexmark.parser.Parser;
-import com.vladsch.flexmark.util.data.MutableDataSet;
+import org.nasdanika.models.drawio.Document;
 
 public class DrawioResourceContentsHandler implements ResourceEObjectContentsHandler<Document> {
 
@@ -29,24 +22,25 @@ public class DrawioResourceContentsHandler implements ResourceEObjectContentsHan
 
 	@Override
 	public Document load(InputStream inputStream, Map<?, ?> options) throws IOException {
-		try (Reader reader = new InputStreamReader(inputStream)) {
-	        MutableDataSet parserOptions = new MutableDataSet();
-	        parserOptions.set(Parser.EXTENSIONS, List.of(AttributesExtension.create(), TablesExtension.create()));
-
-	        Parser parser = Parser.builder(parserOptions).build();
-
-	        com.vladsch.flexmark.util.ast.Document document = parser.parseReader(reader);
-	        Document ecoreDoc = MarkdownFactory.eINSTANCE.createDocument();
-	        new MarkdownVisitor(ecoreDoc).visit(document);
-			return ecoreDoc;			
-		}
+		throw new UnsupportedOperationException("Loading Drawio documents is not supported yet.");
+//		try (Reader reader = new InputStreamReader(inputStream)) {
+//	        MutableDataSet parserOptions = new MutableDataSet();
+//	        parserOptions.set(Parser.EXTENSIONS, List.of(AttributesExtension.create(), TablesExtension.create()));
+//
+//	        Parser parser = Parser.builder(parserOptions).build();
+//
+//	        com.vladsch.flexmark.util.ast.Document document = parser.parseReader(reader);
+//	        Document ecoreDoc = MarkdownFactory.eINSTANCE.createDocument();
+//	        new MarkdownVisitor(ecoreDoc).visit(document);
+//			return ecoreDoc;			
+//		}
 	}	
 	
 	@Override
 	public void save(Document document, OutputStream outputStream, Map<?, ?> options) throws IOException {
-		try (Writer writer = new OutputStreamWriter(outputStream)) {
-			writer.write(document.getContent()); // Simple writing back.
-		}
+//		try (Writer writer = new OutputStreamWriter(outputStream)) {
+//			writer.write(document.getContent()); // Simple writing back.
+//		}
 	}
 
 }

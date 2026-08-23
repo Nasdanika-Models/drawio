@@ -9,7 +9,7 @@ module org.nasdanika.models.drawio {
 	exports org.nasdanika.models.drawio;
 	exports org.nasdanika.models.drawio.impl;
 	exports org.nasdanika.models.drawio.util;
-	exports org.nasdanika.models.drawio.loader;
+//	exports org.nasdanika.models.drawio.loader;
 	
 	requires transitive org.eclipse.emf.ecore;
 	requires transitive org.eclipse.emf.common;

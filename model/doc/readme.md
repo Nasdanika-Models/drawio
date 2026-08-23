@@ -58,7 +58,6 @@ That is roughly a dozen things. Everything else a Draw.io diagram has, a Visio d
 **Fidelity to the format, not to the pixels.**
 A `.drawio` file loaded and saved through this model should open in the editor unchanged, because Draw.io is the tool people will keep using and a model that scrambles their file is worthless to them.
 A Visio drawing converted *into* Draw.io through this model will not be pixel-identical to the original, and is not trying to be.
-The first is a round-trip guarantee; the second is a migration, and migrations preserve meaning rather than drop shadows.
 
 ## Position in the tower
 
@@ -92,7 +91,7 @@ What is left is genuinely Draw.io:
 
 Worth stating as an exchange, because it is the reason the model is being moved rather than left alone.
 
-**Draw.io gives the family**: the executable-diagram interpreter, the semantic mapping approach and its property vocabulary, the site generation pipeline and its [template](https://github.com/Nasdanika-Templates/drawio-site), the magic-property interpolation syntax, the cross-document link vocabulary, the geometric comparators that read layout as ordering, and a decade of accumulated pragmatics about what a diagram file actually contains.
+**Draw.io gives the family**: the executable-diagram interpreter, the semantic mapping approach and its property vocabulary, the site generation pipeline and its [template](https://github.com/Nasdanika-Templates/drawio-site), the magic-property interpolation syntax, the cross-document link vocabulary, the geometric comparators that read layout as ordering, and years of accumulated pragmatics about what a diagram file actually contains.
 
 **The family gives Draw.io**: ELK and force-directed layout as a shared service, three-way merge with a Git merge driver, format-independent generation, a route in from Visio and PowerPoint estates, and every domain model in the tower as a legitimate target for `semanticElements`.
 
@@ -126,7 +125,7 @@ Here there is no editor to build or adopt - the editor is Draw.io - and an unmap
 
 **Visio, Lucidchart, Miro, and the rest of the canvas market.**
 Sources and migration origins rather than rivals - see the [presentation model](https://presentation.models.nasdanika.org/) for the Visio case, which is the one enterprises have at scale.
-Draw.io is usually the destination in those conversations, on price and on licensing, and this model is what makes the destination worth arriving at.
+Draw.io is usually the destination in those conversions, and this model is what makes the destination worth arriving at.
 
 **The actual competitor**, as everywhere else in the tower: a `.drawio` file committed to a repository that nothing parses, a PNG exported into a wiki page, and an architecture diagram that was accurate on the day it was drawn.
 
@@ -164,8 +163,7 @@ The [diagram model](https://diagram.models.nasdanika.org/) calls this a ramp rat
 
 **Documentation sites from diagrams.**
 The flagship, and the one with the most mileage on it: point the [Nasdanika CLI](https://docs.nasdanika.org/) at a `.drawio` file and get a navigable, searchable web site - every shape a page, every connection a link, tooltips and documentation attached, and the diagram itself embedded and interactive.
-Worked examples: [actions](https://docs.nasdanika.org/demo-drawio-actions/), [flow](https://docs.nasdanika.org/demo-drawio-flow-actions), and [mind map](https://docs.nasdanika.org/demo-drawio-map).
-The [drawio-site template](https://github.com/Nasdanika-Templates/drawio-site) is the same thing in fork-and-go form, driven by a GitHub Action and a handful of element properties.
+The [drawio-site template](https://github.com/Nasdanika-Templates/drawio-site) is a good starting point, driven by a GitHub Action and a handful of element properties.
 On this model the pipeline stops being Draw.io-specific: the same generator runs over a Visio drawing or a PowerPoint deck, and Draw.io authors keep the site their format has always produced.
 
 **Executable diagrams, and executable PowerPoints.**
