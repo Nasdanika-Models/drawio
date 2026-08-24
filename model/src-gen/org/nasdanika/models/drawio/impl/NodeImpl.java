@@ -77,7 +77,6 @@ public class NodeImpl extends org.nasdanika.models.diagram.impl.NodeImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getStyle() {
 		return (String)eDynamicGet(DrawioPackage.NODE__STYLE, DrawioPackage.Literals.NODE__STYLE, true, true);
 	}
@@ -87,7 +86,6 @@ public class NodeImpl extends org.nasdanika.models.diagram.impl.NodeImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setStyle(String newStyle) {
 		eDynamicSet(DrawioPackage.NODE__STYLE, DrawioPackage.Literals.NODE__STYLE, newStyle);
 	}
@@ -97,7 +95,6 @@ public class NodeImpl extends org.nasdanika.models.diagram.impl.NodeImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getLabel() {
 		return (String)eDynamicGet(DrawioPackage.NODE__LABEL, DrawioPackage.Literals.NODE__LABEL, true, true);
 	}
@@ -107,7 +104,6 @@ public class NodeImpl extends org.nasdanika.models.diagram.impl.NodeImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setLabel(String newLabel) {
 		eDynamicSet(DrawioPackage.NODE__LABEL, DrawioPackage.Literals.NODE__LABEL, newLabel);
 	}
@@ -117,7 +113,6 @@ public class NodeImpl extends org.nasdanika.models.diagram.impl.NodeImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public boolean isCollapsed() {
 		return (Boolean)eDynamicGet(DrawioPackage.NODE__COLLAPSED, DrawioPackage.Literals.NODE__COLLAPSED, true, true);
 	}
@@ -127,7 +122,6 @@ public class NodeImpl extends org.nasdanika.models.diagram.impl.NodeImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setCollapsed(boolean newCollapsed) {
 		eDynamicSet(DrawioPackage.NODE__COLLAPSED, DrawioPackage.Literals.NODE__COLLAPSED, newCollapsed);
 	}

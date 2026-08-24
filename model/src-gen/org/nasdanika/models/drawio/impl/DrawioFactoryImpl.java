@@ -71,7 +71,6 @@ public class DrawioFactoryImpl extends EFactoryImpl implements DrawioFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Document createDocument() {
 		DocumentImpl document = new DocumentImpl();
 		return document;
@@ -82,7 +81,6 @@ public class DrawioFactoryImpl extends EFactoryImpl implements DrawioFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Page createPage() {
 		PageImpl page = new PageImpl();
 		return page;
@@ -93,7 +91,6 @@ public class DrawioFactoryImpl extends EFactoryImpl implements DrawioFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Layer createLayer() {
 		LayerImpl layer = new LayerImpl();
 		return layer;
@@ -104,7 +101,6 @@ public class DrawioFactoryImpl extends EFactoryImpl implements DrawioFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Node createNode() {
 		NodeImpl node = new NodeImpl();
 		return node;
@@ -115,7 +111,6 @@ public class DrawioFactoryImpl extends EFactoryImpl implements DrawioFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Connection createConnection() {
 		ConnectionImpl connection = new ConnectionImpl();
 		return connection;
@@ -126,7 +121,6 @@ public class DrawioFactoryImpl extends EFactoryImpl implements DrawioFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public DrawioPackage getDrawioPackage() {
 		return (DrawioPackage)getEPackage();
 	}

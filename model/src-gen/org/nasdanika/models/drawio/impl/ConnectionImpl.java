@@ -66,7 +66,6 @@ public class ConnectionImpl extends org.nasdanika.models.diagram.impl.Connection
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getStyle() {
 		return (String)eDynamicGet(DrawioPackage.CONNECTION__STYLE, DrawioPackage.Literals.CONNECTION__STYLE, true, true);
 	}
@@ -76,7 +75,6 @@ public class ConnectionImpl extends org.nasdanika.models.diagram.impl.Connection
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setStyle(String newStyle) {
 		eDynamicSet(DrawioPackage.CONNECTION__STYLE, DrawioPackage.Literals.CONNECTION__STYLE, newStyle);
 	}
@@ -86,7 +84,6 @@ public class ConnectionImpl extends org.nasdanika.models.diagram.impl.Connection
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getLabel() {
 		return (String)eDynamicGet(DrawioPackage.CONNECTION__LABEL, DrawioPackage.Literals.CONNECTION__LABEL, true, true);
 	}
@@ -96,7 +93,6 @@ public class ConnectionImpl extends org.nasdanika.models.diagram.impl.Connection
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setLabel(String newLabel) {
 		eDynamicSet(DrawioPackage.CONNECTION__LABEL, DrawioPackage.Literals.CONNECTION__LABEL, newLabel);
 	}

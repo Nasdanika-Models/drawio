@@ -90,7 +90,6 @@ public class DocumentImpl extends PresentationImpl implements Document {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getHost() {
 		return (String)eDynamicGet(DrawioPackage.DOCUMENT__HOST, DrawioPackage.Literals.DOCUMENT__HOST, true, true);
 	}
@@ -100,7 +99,6 @@ public class DocumentImpl extends PresentationImpl implements Document {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setHost(String newHost) {
 		eDynamicSet(DrawioPackage.DOCUMENT__HOST, DrawioPackage.Literals.DOCUMENT__HOST, newHost);
 	}
@@ -110,7 +108,6 @@ public class DocumentImpl extends PresentationImpl implements Document {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getAgent() {
 		return (String)eDynamicGet(DrawioPackage.DOCUMENT__AGENT, DrawioPackage.Literals.DOCUMENT__AGENT, true, true);
 	}
@@ -120,7 +117,6 @@ public class DocumentImpl extends PresentationImpl implements Document {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setAgent(String newAgent) {
 		eDynamicSet(DrawioPackage.DOCUMENT__AGENT, DrawioPackage.Literals.DOCUMENT__AGENT, newAgent);
 	}
@@ -130,7 +126,6 @@ public class DocumentImpl extends PresentationImpl implements Document {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getVersion() {
 		return (String)eDynamicGet(DrawioPackage.DOCUMENT__VERSION, DrawioPackage.Literals.DOCUMENT__VERSION, true, true);
 	}
@@ -140,7 +135,6 @@ public class DocumentImpl extends PresentationImpl implements Document {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setVersion(String newVersion) {
 		eDynamicSet(DrawioPackage.DOCUMENT__VERSION, DrawioPackage.Literals.DOCUMENT__VERSION, newVersion);
 	}
@@ -150,7 +144,6 @@ public class DocumentImpl extends PresentationImpl implements Document {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public boolean isCompressed() {
 		return (Boolean)eDynamicGet(DrawioPackage.DOCUMENT__COMPRESSED, DrawioPackage.Literals.DOCUMENT__COMPRESSED, true, true);
 	}
@@ -160,7 +153,6 @@ public class DocumentImpl extends PresentationImpl implements Document {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setCompressed(boolean newCompressed) {
 		eDynamicSet(DrawioPackage.DOCUMENT__COMPRESSED, DrawioPackage.Literals.DOCUMENT__COMPRESSED, newCompressed);
 	}

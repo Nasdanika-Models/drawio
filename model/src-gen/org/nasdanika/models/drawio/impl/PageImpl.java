@@ -101,7 +101,6 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public double getDx() {
 		return (Double)eDynamicGet(DrawioPackage.PAGE__DX, DrawioPackage.Literals.PAGE__DX, true, true);
 	}
@@ -111,7 +110,6 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setDx(double newDx) {
 		eDynamicSet(DrawioPackage.PAGE__DX, DrawioPackage.Literals.PAGE__DX, newDx);
 	}
@@ -121,7 +119,6 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public double getDy() {
 		return (Double)eDynamicGet(DrawioPackage.PAGE__DY, DrawioPackage.Literals.PAGE__DY, true, true);
 	}
@@ -131,7 +128,6 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setDy(double newDy) {
 		eDynamicSet(DrawioPackage.PAGE__DY, DrawioPackage.Literals.PAGE__DY, newDy);
 	}
@@ -141,7 +137,6 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public double getPageWidth() {
 		return (Double)eDynamicGet(DrawioPackage.PAGE__PAGE_WIDTH, DrawioPackage.Literals.PAGE__PAGE_WIDTH, true, true);
 	}
@@ -151,7 +146,6 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPageWidth(double newPageWidth) {
 		eDynamicSet(DrawioPackage.PAGE__PAGE_WIDTH, DrawioPackage.Literals.PAGE__PAGE_WIDTH, newPageWidth);
 	}
@@ -161,7 +155,6 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public double getPageHeight() {
 		return (Double)eDynamicGet(DrawioPackage.PAGE__PAGE_HEIGHT, DrawioPackage.Literals.PAGE__PAGE_HEIGHT, true, true);
 	}
@@ -171,7 +164,6 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPageHeight(double newPageHeight) {
 		eDynamicSet(DrawioPackage.PAGE__PAGE_HEIGHT, DrawioPackage.Literals.PAGE__PAGE_HEIGHT, newPageHeight);
 	}
@@ -181,7 +173,6 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public double getGridSize() {
 		return (Double)eDynamicGet(DrawioPackage.PAGE__GRID_SIZE, DrawioPackage.Literals.PAGE__GRID_SIZE, true, true);
 	}
@@ -191,7 +182,6 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setGridSize(double newGridSize) {
 		eDynamicSet(DrawioPackage.PAGE__GRID_SIZE, DrawioPackage.Literals.PAGE__GRID_SIZE, newGridSize);
 	}

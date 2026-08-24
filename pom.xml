@@ -186,7 +186,7 @@
 
 	<modules>
 		<module>model</module>
-		<module>handlers</module>
+		<!--<module>handlers</module>-->
 	</modules>
 
 	 <profiles>

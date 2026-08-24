@@ -136,7 +136,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getDocument() {
 		return documentEClass;
 	}
@@ -146,7 +145,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getDocument_Host() {
 		return (EAttribute)documentEClass.getEStructuralFeatures().get(0);
 	}
@@ -156,7 +154,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getDocument_Agent() {
 		return (EAttribute)documentEClass.getEStructuralFeatures().get(1);
 	}
@@ -166,7 +163,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getDocument_Version() {
 		return (EAttribute)documentEClass.getEStructuralFeatures().get(2);
 	}
@@ -176,7 +172,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getDocument_Compressed() {
 		return (EAttribute)documentEClass.getEStructuralFeatures().get(3);
 	}
@@ -186,7 +181,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getPage() {
 		return pageEClass;
 	}
@@ -196,7 +190,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getPage_Dx() {
 		return (EAttribute)pageEClass.getEStructuralFeatures().get(0);
 	}
@@ -206,7 +199,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getPage_Dy() {
 		return (EAttribute)pageEClass.getEStructuralFeatures().get(1);
 	}
@@ -216,7 +208,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getPage_PageWidth() {
 		return (EAttribute)pageEClass.getEStructuralFeatures().get(2);
 	}
@@ -226,7 +217,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getPage_PageHeight() {
 		return (EAttribute)pageEClass.getEStructuralFeatures().get(3);
 	}
@@ -236,7 +226,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getPage_GridSize() {
 		return (EAttribute)pageEClass.getEStructuralFeatures().get(4);
 	}
@@ -246,7 +235,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getLayer() {
 		return layerEClass;
 	}
@@ -256,7 +244,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getLayer_Style() {
 		return (EAttribute)layerEClass.getEStructuralFeatures().get(0);
 	}
@@ -266,7 +253,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getNode() {
 		return nodeEClass;
 	}
@@ -276,7 +262,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getNode_Style() {
 		return (EAttribute)nodeEClass.getEStructuralFeatures().get(0);
 	}
@@ -286,7 +271,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getNode_Label() {
 		return (EAttribute)nodeEClass.getEStructuralFeatures().get(1);
 	}
@@ -296,7 +280,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getNode_Collapsed() {
 		return (EAttribute)nodeEClass.getEStructuralFeatures().get(2);
 	}
@@ -306,7 +289,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getConnection() {
 		return connectionEClass;
 	}
@@ -316,7 +298,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getConnection_Style() {
 		return (EAttribute)connectionEClass.getEStructuralFeatures().get(0);
 	}
@@ -326,7 +307,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getConnection_Label() {
 		return (EAttribute)connectionEClass.getEStructuralFeatures().get(1);
 	}
@@ -336,7 +316,6 @@ public class DrawioPackageImpl extends EPackageImpl implements DrawioPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public DrawioFactory getDrawioFactory() {
 		return (DrawioFactory)getEFactoryInstance();
 	}
