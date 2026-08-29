@@ -5,7 +5,7 @@
 
 [TOC levels=6]
 
-An [Ecore](https://ecore.models.nasdanika.org/) model of **Draw.io diagrams as data**: pages, layers, nodes, connections, the custom properties, the tags, the links, the connection points that decide where an arrow lands - and the style string, turned into an object instead of kept as a substring.
+An [Ecore](https://ecore.models.nasdanika.org/) model of **Draw.io diagrams as data**: pages, layers, nodes, connections, the custom properties, the tags, the links that reach into other documents, the click actions and page animations, the connection points that decide where an arrow lands - and the style string, turned into an object instead of kept as a substring.
 
 It is the Ecore face of the [Nasdanika Core Draw.io](https://docs.nasdanika.org/core/drawio/index.html) Java API, which has been reading, writing, executing, and mapping `.drawio` files for years.
 That API keeps doing the loading and the saving - compressed and uncompressed XML, PNG metadata, HTML embedding, page and element links, URI handlers - and this model is what it loads into.
@@ -51,6 +51,7 @@ The style vocabulary, and the `Style` hierarchy that types it.
 The custom properties on the `<object>` wrapper.
 Tags, which the in-browser viewer filters by, so a generated diagram is interactive with no tooling at all.
 The link URI vocabulary - `data:page,`, `data:page/name,`, `data:element/id,` - which turns a folder of files into a navigable network of diagrams.
+Custom actions and page animations, the JSON that shares that same `link` attribute, which is the only thing in the family that makes a diagram move.
 Exit and entry style attributes, which are connection points by another name.
 Compression, PNG embedding, page geometry, and grid.
 That is roughly a dozen things. Everything else a Draw.io diagram has, a Visio drawing and a PowerPoint deck also have, and it belongs on the floors below.
@@ -82,16 +83,17 @@ The alternative - introduce a modeling tool, train the modelers, then train the 
 Presentation supplies the deck, the slides, the shapes, the text tree, the masters, and the connectors; diagram supplies identity, documentation, `properties`, `tags`, `semanticElements`, bounds, ports, layers, and the containment tree.
 What is left is genuinely Draw.io:
 
-* **Style as an object.** A derived, read-only `style` reference on a common `ModelElement` supertype, so nodes, connections, and layers all have one - returning a `Style` backed by the element's properties, specialized as `NodeStyle` and `ConnectionStyle`, with a contained `EMap` of raw entries underneath and enumerations for arrow, line, and jump styles.
+* **Style as an object.** A derived, read-only `style` reference on a common `Element` supertype, so nodes, connections, and layers all have one - returning a `Style` backed by the element's properties, specialized as `NodeStyle` and `ConnectionStyle`, with a contained `EMap` of raw entries underneath and enumerations for arrow, line, and jump styles.
 * **mxGraph document facts.** `host`, `agent`, `version`, and `compressed` on [`DrawioDocument`](references/eClassifiers/DrawioDocument/index.html); `dx`, `dy`, `pageWidth`, `pageHeight`, and `gridSize` on [`Page`](references/eClassifiers/Page/index.html) - the attributes that decide whether a saved file opens the way its author left it.
 * **Connection points.** A `ConnectionPoint` extending diagram `Port` with pixel `dx`/`dy` offsets, which is what `exitX`/`exitY`/`entryX`/`entryY` actually are - so an arrow anchored to the left edge of a box is still anchored there after a conversion, instead of snapping to the centre.
 * **Links as model references.** Draw.io links are strings; in a resource set they resolve into real references to other pages and other elements in other documents, which is the difference between a folder of diagrams and one federated model.
+* **Actions and animation.** `Actions` on an element and `Animation` on a page, over one typed `Action` vocabulary whose steps point at cells, layers, and tags by reference. A diagram that moves, described as structure a generator can write.
 
 ### The reciprocity
 
 Worth stating as an exchange, because it is the reason the model is being moved rather than left alone.
 
-**Draw.io gives the family**: the executable-diagram interpreter, the semantic mapping approach and its property vocabulary, the site generation pipeline and its [template](https://github.com/Nasdanika-Templates/drawio-site), the magic-property interpolation syntax, the cross-document link vocabulary, the geometric comparators that read layout as ordering, and years of accumulated pragmatics about what a diagram file actually contains.
+**Draw.io gives the family**: the executable-diagram interpreter, the semantic mapping approach and its property vocabulary, the site generation pipeline and its [template](https://github.com/Nasdanika-Templates/drawio-site), the magic-property interpolation syntax, the cross-document link vocabulary, the geometric comparators that read layout as ordering, an animation vocabulary concrete enough to generate against, and years of accumulated pragmatics about what a diagram file actually contains.
 
 **The family gives Draw.io**: ELK and force-directed layout as a shared service, three-way merge with a Git merge driver, format-independent generation, a route in from Visio and PowerPoint estates, and every domain model in the tower as a legitimate target for `semanticElements`.
 
@@ -117,6 +119,27 @@ And they are not authoring surfaces for the people who own the content - an SME 
 The disagreements are direction and scope.
 Structurizr is model-first and C4-shaped, with diagrams as output; this model is diagram-first with mapping as an optional upgrade, on a tower that goes well past C4 into threat, work, governance, and lifecycle.
 And the editor here is Draw.io, which the organization already has, rather than a DSL plus a renderer.
+
+**Observability and dashboarding: Grafana, Datadog, Dynatrace, New Relic, Kibana.**
+The incumbent for "show me what happened", and very good at time series.
+Two gaps, both structural.
+What appears on screen is a chart or a service map the tool generated, never the architecture diagram the team actually reasons with, so the picture is always adjacent to the mental model rather than being it.
+And the features that come closest - Grafana's Canvas and Node Graph panels, Dynatrace's Smartscape - are configured in the tool, live in the tool, and cannot be reviewed in a pull request, generated from a design, or handed to anything else.
+Here the diagram is the artifact, the telemetry is a model, and the animation is generated from both.
+
+**Hand-authored animation: PowerPoint animations and morph, Prezi, Lottie and After Effects, Reveal.js fragments, animated GIFs, screen recordings.**
+Each is authored by hand, step by step or frame by frame, and none is generated from anything.
+The moment the system changes the animation is wrong, and nothing indicates that it is.
+Recordings are the worst of them: they cannot be edited, diffed, searched, or corrected, and they go stale silently while looking authoritative.
+
+**Animation in diagram-as-code: Mermaid, PlantUML, D2, Structurizr.**
+Mostly absent - Mermaid and PlantUML have nothing.
+D2 has board `steps` and can emit an animated SVG, which is the closest thing in that group to what is described here.
+Structurizr's dynamic views and animation steps reveal elements progressively, and the comparison is the instructive one: generated from a model, which is right, but C4-shaped, bound to its own renderer, and closer to numbered stages than to motion.
+
+**Web diagram frameworks: Sprotty, GLSP, D3, Cytoscape.js, vis.js.**
+Capable of far more animation than Draw.io, which is exactly why [Sprotty](https://sprotty.models.nasdanika.org/) is a family member rather than a competitor - the applications section sets out the split and its costs.
+What none of them is, is an editor a subject-matter expert opens on a Tuesday to redraw a box.
 
 **Eclipse modeling: GMF `notation.ecore`, Sirius, Graphiti, GLSP.**
 The closest technical relatives, and the [diagram model](https://diagram.models.nasdanika.org/) carries the full comparison.
@@ -147,6 +170,12 @@ On a model, the inputs and the outputs of that interpolation are both addressabl
 **Links become navigable references.**
 `data:page/name,my-system.drawio#My+Component` and `data:element/id,...` are strings in the file and real cross-resource references in a resource set - including through URI handlers such as `maven://` and `gitlab://`, which means a diagram can link into a diagram that was never checked out.
 A network of diagrams maintained by several teams becomes one traversable object graph, and "what links to this component" is a `getReferrers` query.
+`SimpleLink`, `CustomLink`, and `SpelLink` share one `AbstractLink` base with `Actions`, because in the file they share one attribute - so "what happens when this shape is clicked" is a single question with a typed answer.
+
+**Actions and animations are structure, not a JSON string.**
+Draw.io's custom actions live in that same `link` attribute as a blob: `{"actions":[{"fadeIn":{"cells":["A"]}},{"wait":500},{"highlight":{"tags":["slow"],"color":"#ff0000"}}]}`.
+Modeled, each step is a typed object and its `cells`, `layers`, and `tags` are references rather than strings - so an animation survives a rename, fails loudly when it points at a shape somebody deleted, and can be written by a generator that says "highlight the elements depicting this service" instead of assembling a list of ids by hand.
+`Actions` on an element and `Animation` on a page share one vocabulary, so a sequence authored for a click can be replayed on load and the other way round.
 
 **Tags and layers are meaning, not decoration.**
 The viewer filters by tag and toggles layers with no server involved, so one generated diagram serves several audiences: the future-state layer, the out-of-scope layer, the per-domain tag.
@@ -170,6 +199,33 @@ On this model the pipeline stops being Draw.io-specific: the same generator runs
 Elements carry processor URIs, the graph is wired into Java processors through the [Graph](https://github.com/Nasdanika-Models/graph) module, and the picture runs - see [Executable (computational) graphs and diagrams](https://medium.com/nasdanika/executable-computational-graphs-diagrams-1eeffc80976d).
 Lifting the interpreter onto shared supertypes means it stops being Draw.io-specific, which is what makes an executable deck a straight-faced proposition: slides as pages, shapes as processors, connectors as message paths, and the deck stays a deck a business audience can open.
 Draw.io remains the natural place to *author* one, because it is the only member of the family that is also a decent graph editor.
+
+**Animated diagrams, generated from the tower.**
+An executable diagram runs; an animated diagram *shows* something running, and the two want the same model underneath.
+Because actions and animations are typed objects holding references into the drawing, a generator produces the animation the same way it produces the shapes - and the sources it would generate from are already models here.
+
+* **Execution flow, in two modalities.** How it is *supposed* to go, generated from a design: [general purpose executable diagrams](https://medium.com/nasdanika/general-purpose-executable-graphs-and-diagrams-8663deae5248), an [org design](https://github.com/Nasdanika-Models/org-design) process, a [BW5](https://bw5.models.nasdanika.org/) integration, an [agent](https://agent.models.nasdanika.org/) system, a [threat](https://threat.models.nasdanika.org/) attack path. And what *actually* happened, recorded directly or generated from [telemetry](https://telemetry.models.nasdanika.org/): the same diagram, animated with the trace that really ran, in the order it really ran, taking the time it really took (scaled).
+  The second modality is the one nobody has. Traces are read in flame graphs and waterfall charts, while the architecture diagram the team actually reasons with is a separate picture that knows nothing about the trace. Here they are one artifact, and the difference between the two modalities is itself reviewable.
+* **Financial flows.** The [accounting](https://accounting.models.nasdanika.org/) model has the ledgers and the postings; the diagram has arrows between accounts. Two flavours: a graph of accounts generated wholesale, or - the one finance teams will actually accept, because the chart of accounts is theirs - a hand-drawn account hierarchy that a generation run adds flow arrows to. `SetOpacity` carries magnitude, so a faint arrow moved little and a solid one moved a lot, and `Flow` animates the direction.
+* **UI flows.** Fill this field, click that button, arrive at that screen. A wireframe that walks through itself, generated from the same model that drives the tests.
+* **Status overlays.** `SetStyle` applied over a drawing nobody has to redraw, driven by what the estate already knows. RAG for a process or execution model - red for the critical path and the failures, amber for warnings, green for healthy. Or [Jira](https://jira.models.nasdanika.org) conventions for construction status - grey for backlog, blue for in progress, green for done, red for blocked, amber for past due.
+
+The leverage is that **an agent can generate the animation, not only the diagram**.
+Given a dozen action classes and references instead of ids, a language model can be asked to animate the high-latency activities on a diagram it did not draw, and the result is checkable before anything renders: every referenced cell exists, every tag is defined, every color is one the palette allows.
+Asking that same model to emit `{"actions":[...]}` into a `link` attribute is asking it to be careful with a string, which is not a contract.
+
+**Honest about the ceiling.**
+This is not full-blown animation and should not be sold as such.
+The vocabulary is opacity, wipes, pops, style changes, highlights, flow dashes, viewport moves, and waits, sequenced with delays.
+There is no easing worth the name, no motion along an arbitrary path, no timeline to scrub, no per-frame control, and the sequencing model is a list of steps rather than a graph.
+What it buys is nevertheless large, because it runs **in the free viewer everybody already has** - embedded in a wiki page or a generated site, with no plugin, no player, and no build step, on a diagram that is still editable afterwards.
+That combination is rare enough to be worth the ceiling, and it is a very good place to start.
+
+**The upgrade path is already in the tower.**
+Richer animation is a rendering concern, and rendering is what [Sprotty](https://sprotty.models.nasdanika.org/) is for.
+Because the actions are Draw.io-specific but the drawing under them is a [diagram](https://diagram.models.nasdanika.org/), the same sequence can be handed to a web renderer with more room to move.
+The trade-offs should be stated in advance rather than discovered: Sprotty animates transitions between model states, so a genuine timeline is work built on that rather than a switch to flip; a Sprotty rendering gives up Draw.io's shape library and its editability and takes on a build and hosting story; and the mapping between a step list and a richer timeline will not be lossless in either direction.
+So the split is Draw.io where the diagram has to stay editable and openable by anyone, Sprotty where the animation itself is the deliverable - authored once, on the shared floor, rather than twice.
 
 **Semantic mapping onto the tower.**
 Map diagram elements to domain model elements through properties - creation, references, attributes, operations, with geometric comparators treating position as meaning.
@@ -210,11 +266,14 @@ See [agent](https://agent.models.nasdanika.org/) and [AI governance](https://ai.
 | Document | [DrawioDocument](references/eClassifiers/DrawioDocument/index.html) (extends presentation `Presentation`) - `host`, `agent`, `version`, `compressed` |
 | Pages | [Page](references/eClassifiers/Page/index.html) (extends presentation `Slide`, and therefore diagram `Diagram`) - `dx`, `dy`, `pageWidth`, `pageHeight`, `gridSize` |
 | Layer elements | [DrawioLayer](references/eClassifiers/DrawioLayer/index.html), [DrawioNode](references/eClassifiers/DrawioNode/index.html) (`label`, `collapsed`), [DrawioConnection](references/eClassifiers/DrawioConnection/index.html) |
-| Style | `Style` - a contained `EMap` of raw entries plus typed features; `NodeStyle` and `ConnectionStyle` specializations; enumerations for arrow, line, and jump styles; reached through a derived read-only `style` reference on `ModelElement`, backed by the element's properties |
-| Draw.io specifics | custom `<object>` properties loaded into diagram `properties`; tags; link URIs |
+| Style | `Style` - a contained `EMap` of raw entries plus typed features; `NodeStyle` and `ConnectionStyle` specializations; enumerations for arrow, line, and jump styles; reached through a derived read-only `style` reference on `Element`, backed by the element's properties |
+| Links | `AbstractLink` with `SimpleLink` (a URL kept verbatim), `CustomLink` (the extended `data:page/...` and `data:element/...` notation, with an optional document URI, resolved to a `LinkTarget` - a `Page` or an `Element` - possibly in another resource), and `SpelLink`; reached through `Element.link` |
+| Actions and animation | `Actions` (optional title plus an ordered `Action` list) on an element, `Animation` (`enabled`, `loop`, steps) on a page, over one `Action` vocabulary: visibility (`Show`, `Hide`, `Toggle`, `SetOpacity`), transitions (`FadeIn`, `FadeOut`, `FadeTo`, `WipeIn`, `WipeOut`, `PopIn`, `PopOut`), style (`SetStyle`, `ToggleStyle`, `Highlight`, `Flow`), navigation (`Select`, `Scroll`, `Viewbox`, `Open`), tag visibility (`TagsAction`), and `Wait` - selecting cells through `cells`, `layers`, and `tags` references with `tagsMatch` and `excludeCells` |
+| Tags | `Tag` contained by `Page`, pointed at by elements and by actions, so tag-driven filtering and tag-driven animation refer to the same objects |
+| Draw.io specifics | custom `<object>` properties loaded into diagram `properties` |
 | Reused, not redefined | presentation `Presentation`, `Slide`, `Shape`, `ConnectorShape`, text tree, masters, notes; diagram `DiagramElement` (`tags`, `properties`, `semanticElements`, `children` keyed by `id`), `Node` bounds and ports, `Layer`, `Connection`; nxcore identity, documentation, `uris`, `icon`, and markers |
 | Provided by the Java API, not the model | parsing and serialization, compression, PNG metadata, HTML embedding, page and element link resolution, URI handlers, layout, comparators |
-| In progress | the `ModelElement` supertype with its derived `style` reference, and the `Style` / `NodeStyle` / `ConnectionStyle` hierarchy with its enumerations; `ConnectionPoint` extending diagram `Port` with pixel `dx`/`dy` for `exitX`/`exitY`/`entryX`/`entryY`; capability wiring so a `.drawio` URI resolves to a model in a resource set; migration of the site generator, the executable-diagram interpreter, and the ELK factory down onto the shared models |
+| In progress | the `Element` supertype with its derived `style` reference, and the `Style` / `NodeStyle` / `ConnectionStyle` hierarchy with its enumerations; `ConnectionPoint` extending diagram `Port` with pixel `dx`/`dy` for `exitX`/`exitY`/`entryX`/`entryY`; capability wiring so a `.drawio` URI resolves to a model in a resource set; migration of the site generator, the executable-diagram interpreter, and the ELK factory down onto the shared models; animation generators for the telemetry, accounting, and flow cases, and the Sprotty route for animation that outgrows the Draw.io viewer |
 
 ## Relation to other Nasdanika work
 

@@ -55,6 +55,7 @@ public class LayerImpl extends org.nasdanika.models.diagram.impl.LayerImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getStyle() {
 		return (String)eDynamicGet(DrawioPackage.LAYER__STYLE, DrawioPackage.Literals.LAYER__STYLE, true, true);
 	}
@@ -64,6 +65,7 @@ public class LayerImpl extends org.nasdanika.models.diagram.impl.LayerImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStyle(String newStyle) {
 		eDynamicSet(DrawioPackage.LAYER__STYLE, DrawioPackage.Literals.LAYER__STYLE, newStyle);
 	}

@@ -20,7 +20,7 @@ package org.nasdanika.models.drawio;
  * @model
  * @generated
  */
-public interface Connection extends org.nasdanika.models.diagram.Connection {
+public interface Connection extends org.nasdanika.models.diagram.Connection, ModelElement {
 	/**
 	 * Returns the value of the '<em><b>Style</b></em>' attribute.
 	 * <!-- begin-user-doc -->

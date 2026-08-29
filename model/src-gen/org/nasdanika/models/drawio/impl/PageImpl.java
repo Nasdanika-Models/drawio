@@ -2,10 +2,20 @@
  */
 package org.nasdanika.models.drawio.impl;
 
+import java.util.Collection;
+
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.nasdanika.models.drawio.DrawioPackage;
 import org.nasdanika.models.drawio.Page;
+import org.nasdanika.models.drawio.Tag;
 
 import org.nasdanika.models.presentation.impl.SlideImpl;
 
@@ -22,6 +32,7 @@ import org.nasdanika.models.presentation.impl.SlideImpl;
  *   <li>{@link org.nasdanika.models.drawio.impl.PageImpl#getPageWidth <em>Page Width</em>}</li>
  *   <li>{@link org.nasdanika.models.drawio.impl.PageImpl#getPageHeight <em>Page Height</em>}</li>
  *   <li>{@link org.nasdanika.models.drawio.impl.PageImpl#getGridSize <em>Grid Size</em>}</li>
+ *   <li>{@link org.nasdanika.models.drawio.impl.PageImpl#getTags <em>Tags</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,6 +112,7 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getDx() {
 		return (Double)eDynamicGet(DrawioPackage.PAGE__DX, DrawioPackage.Literals.PAGE__DX, true, true);
 	}
@@ -110,6 +122,7 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDx(double newDx) {
 		eDynamicSet(DrawioPackage.PAGE__DX, DrawioPackage.Literals.PAGE__DX, newDx);
 	}
@@ -119,6 +132,7 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getDy() {
 		return (Double)eDynamicGet(DrawioPackage.PAGE__DY, DrawioPackage.Literals.PAGE__DY, true, true);
 	}
@@ -128,6 +142,7 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDy(double newDy) {
 		eDynamicSet(DrawioPackage.PAGE__DY, DrawioPackage.Literals.PAGE__DY, newDy);
 	}
@@ -137,6 +152,7 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getPageWidth() {
 		return (Double)eDynamicGet(DrawioPackage.PAGE__PAGE_WIDTH, DrawioPackage.Literals.PAGE__PAGE_WIDTH, true, true);
 	}
@@ -146,6 +162,7 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPageWidth(double newPageWidth) {
 		eDynamicSet(DrawioPackage.PAGE__PAGE_WIDTH, DrawioPackage.Literals.PAGE__PAGE_WIDTH, newPageWidth);
 	}
@@ -155,6 +172,7 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getPageHeight() {
 		return (Double)eDynamicGet(DrawioPackage.PAGE__PAGE_HEIGHT, DrawioPackage.Literals.PAGE__PAGE_HEIGHT, true, true);
 	}
@@ -164,6 +182,7 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPageHeight(double newPageHeight) {
 		eDynamicSet(DrawioPackage.PAGE__PAGE_HEIGHT, DrawioPackage.Literals.PAGE__PAGE_HEIGHT, newPageHeight);
 	}
@@ -173,6 +192,7 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double getGridSize() {
 		return (Double)eDynamicGet(DrawioPackage.PAGE__GRID_SIZE, DrawioPackage.Literals.PAGE__GRID_SIZE, true, true);
 	}
@@ -182,8 +202,34 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGridSize(double newGridSize) {
 		eDynamicSet(DrawioPackage.PAGE__GRID_SIZE, DrawioPackage.Literals.PAGE__GRID_SIZE, newGridSize);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<Tag> getTags() {
+		return (EList<Tag>)eDynamicGet(DrawioPackage.PAGE__TAGS, DrawioPackage.Literals.PAGE__TAGS, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case DrawioPackage.PAGE__TAGS:
+				return ((InternalEList<?>)getTags()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -204,6 +250,8 @@ public class PageImpl extends SlideImpl implements Page {
 				return getPageHeight();
 			case DrawioPackage.PAGE__GRID_SIZE:
 				return getGridSize();
+			case DrawioPackage.PAGE__TAGS:
+				return getTags();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -213,6 +261,7 @@ public class PageImpl extends SlideImpl implements Page {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -230,6 +279,10 @@ public class PageImpl extends SlideImpl implements Page {
 				return;
 			case DrawioPackage.PAGE__GRID_SIZE:
 				setGridSize((Double)newValue);
+				return;
+			case DrawioPackage.PAGE__TAGS:
+				getTags().clear();
+				getTags().addAll((Collection<? extends Tag>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -258,6 +311,9 @@ public class PageImpl extends SlideImpl implements Page {
 			case DrawioPackage.PAGE__GRID_SIZE:
 				setGridSize(GRID_SIZE_EDEFAULT);
 				return;
+			case DrawioPackage.PAGE__TAGS:
+				getTags().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -280,6 +336,8 @@ public class PageImpl extends SlideImpl implements Page {
 				return getPageHeight() != PAGE_HEIGHT_EDEFAULT;
 			case DrawioPackage.PAGE__GRID_SIZE:
 				return getGridSize() != GRID_SIZE_EDEFAULT;
+			case DrawioPackage.PAGE__TAGS:
+				return !getTags().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

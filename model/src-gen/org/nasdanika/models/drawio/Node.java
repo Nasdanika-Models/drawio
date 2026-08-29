@@ -21,7 +21,7 @@ package org.nasdanika.models.drawio;
  * @model
  * @generated
  */
-public interface Node extends org.nasdanika.models.diagram.Node {
+public interface Node extends org.nasdanika.models.diagram.Node, ModelElement {
 	/**
 	 * Returns the value of the '<em><b>Style</b></em>' attribute.
 	 * <!-- begin-user-doc -->

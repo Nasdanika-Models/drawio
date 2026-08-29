@@ -2,6 +2,8 @@
  */
 package org.nasdanika.models.drawio;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.nasdanika.models.presentation.Slide;
 
 /**
@@ -22,13 +24,14 @@ import org.nasdanika.models.presentation.Slide;
  *   <li>{@link org.nasdanika.models.drawio.Page#getPageWidth <em>Page Width</em>}</li>
  *   <li>{@link org.nasdanika.models.drawio.Page#getPageHeight <em>Page Height</em>}</li>
  *   <li>{@link org.nasdanika.models.drawio.Page#getGridSize <em>Grid Size</em>}</li>
+ *   <li>{@link org.nasdanika.models.drawio.Page#getTags <em>Tags</em>}</li>
  * </ul>
  *
  * @see org.nasdanika.models.drawio.DrawioPackage#getPage()
  * @model
  * @generated
  */
-public interface Page extends Slide {
+public interface Page extends Slide, LinkTarget {
 	/**
 	 * Returns the value of the '<em><b>Dx</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -141,5 +144,17 @@ public interface Page extends Slide {
 	 * @generated
 	 */
 	void setGridSize(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Tags</b></em>' containment reference list.
+	 * The list contents are of type {@link org.nasdanika.models.drawio.Tag}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Tags</em>' containment reference list.
+	 * @see org.nasdanika.models.drawio.DrawioPackage#getPage_Tags()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Tag> getTags();
 
 } // Page
