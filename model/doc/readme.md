@@ -133,7 +133,8 @@ The moment the system changes the animation is wrong, and nothing indicates that
 Recordings are the worst of them: they cannot be edited, diffed, searched, or corrected, and they go stale silently while looking authoritative.
 
 **Animation in diagram-as-code: Mermaid, PlantUML, D2, Structurizr.**
-Mostly absent - Mermaid and PlantUML have nothing.
+Mostly absent - Mermaid and PlantUML have no animation of their own.
+What they do have is the sequence diagram, the one mainstream notation whose entire subject is an interaction unfolding over time - which is why they reappear in the applications below as authoring sources rather than competitors: a sequence diagram is an animation script waiting for a stage.
 D2 has board `steps` and can emit an animated SVG, which is the closest thing in that group to what is described here.
 Structurizr's dynamic views and animation steps reveal elements progressively, and the comparison is the instructive one: generated from a model, which is right, but C4-shaped, bound to its own renderer, and closer to numbered stages than to motion.
 
@@ -176,6 +177,7 @@ A network of diagrams maintained by several teams becomes one traversable object
 Draw.io's custom actions live in that same `link` attribute as a blob: `{"actions":[{"fadeIn":{"cells":["A"]}},{"wait":500},{"highlight":{"tags":["slow"],"color":"#ff0000"}}]}`.
 Modeled, each step is a typed object and its `cells`, `layers`, and `tags` are references rather than strings - so an animation survives a rename, fails loudly when it points at a shape somebody deleted, and can be written by a generator that says "highlight the elements depicting this service" instead of assembling a list of ids by hand.
 `Actions` on an element and `Animation` on a page share one vocabulary, so a sequence authored for a click can be replayed on load and the other way round.
+It also means an animation can be authored in a different notation entirely and generated into place - the applications section takes that up with sequence diagrams.
 
 **Tags and layers are meaning, not decoration.**
 The viewer filters by tag and toggles layers with no server involved, so one generated diagram serves several audiences: the future-state layer, the out-of-scope layer, the per-domain tag.
@@ -206,13 +208,21 @@ Because actions and animations are typed objects holding references into the dra
 
 * **Execution flow, in two modalities.** How it is *supposed* to go, generated from a design: [general purpose executable diagrams](https://medium.com/nasdanika/general-purpose-executable-graphs-and-diagrams-8663deae5248), an [org design](https://github.com/Nasdanika-Models/org-design) process, a [BW5](https://bw5.models.nasdanika.org/) integration, an [agent](https://agent.models.nasdanika.org/) system, a [threat](https://threat.models.nasdanika.org/) attack path. And what *actually* happened, recorded directly or generated from [telemetry](https://telemetry.models.nasdanika.org/): the same diagram, animated with the trace that really ran, in the order it really ran, taking the time it really took (scaled).
   The second modality is the one nobody has. Traces are read in flame graphs and waterfall charts, while the architecture diagram the team actually reasons with is a separate picture that knows nothing about the trace. Here they are one artifact, and the difference between the two modalities is itself reviewable.
+* **Sequence diagrams as animation scripts.** The interaction cases need no new authoring format, because one has existed all along: a [PlantUML](https://plantuml.models.nasdanika.org/) or [Mermaid](https://mermaid.models.nasdanika.org/) sequence diagram is an animation script by construction - participants in columns, messages in order, time flowing down the page - and its participants are the boxes on the drawing. An animation starter button carries a property referencing the `.puml` or `.mmd` resource; generation loads it through the model loaders, matches participants to the cells that depict them - by name, by id, or through a shared semantic element, failing loudly on a participant no cell depicts - and emits `Highlight`, `Flow`, and `Wait` steps behind the button. The same source file renders as a sequence diagram in the documentation, so one interaction is stated once and shown twice: in time on the sequence diagram, in space on the drawing. Fragments mark the ceiling honestly - loops unroll, alternatives pick a scenario per run, and a diagram carries one button per scenario rather than a branching player.
 * **Financial flows.** The [accounting](https://accounting.models.nasdanika.org/) model has the ledgers and the postings; the diagram has arrows between accounts. Two flavours: a graph of accounts generated wholesale, or - the one finance teams will actually accept, because the chart of accounts is theirs - a hand-drawn account hierarchy that a generation run adds flow arrows to. `SetOpacity` carries magnitude, so a faint arrow moved little and a solid one moved a lot, and `Flow` animates the direction.
 * **UI flows.** Fill this field, click that button, arrive at that screen. A wireframe that walks through itself, generated from the same model that drives the tests.
 * **Status overlays.** `SetStyle` applied over a drawing nobody has to redraw, driven by what the estate already knows. RAG for a process or execution model - red for the critical path and the failures, amber for warnings, green for healthy. Or [Jira](https://jira.models.nasdanika.org) conventions for construction status - grey for backlog, blue for in progress, green for done, red for blocked, amber for past due.
 
+**The `animate` command is how this ships.**
+A child of [`nsd drawio`](https://docs.nasdanika.org/nsd-cli/nsd/drawio/index.html) and, in the [`nsd model`](https://docs.nasdanika.org/nsd-cli/nsd/model/index.html) pipeline, of a `drawio` subcommand that plays the role [`ecore`](https://docs.nasdanika.org/nsd-cli/nsd/model/ecore/index.html) plays for Ecore models - a cast, in Java terms: load the document, `animate` with options, `save`.
+The command itself knows nothing about animation formats.
+Model loaders turn `.puml`, `.mmd`, a Groovy DSL script, YAML, JSON, or XMI into typed resources, and the [capability framework](https://docs.nasdanika.org/core/capability/index.html) resolves an animation generator for the loaded source's type and the target diagram - the same wiring that resolves loaders and URI handlers everywhere else in the stack.
+Supporting a new animation source is a new capability provider, not a change to the command.
+
 The leverage is that **an agent can generate the animation, not only the diagram**.
 Given a dozen action classes and references instead of ids, a language model can be asked to animate the high-latency activities on a diagram it did not draw, and the result is checkable before anything renders: every referenced cell exists, every tag is defined, every color is one the palette allows.
 Asking that same model to emit `{"actions":[...]}` into a `link` attribute is asking it to be careful with a string, which is not a contract.
+A sequence diagram tightens the contract further: language models emit Mermaid unprompted, and a sequence diagram can be checked against the drawing - every participant depicted, every message between connected elements - before a single step is generated.
 
 **Honest about the ceiling.**
 This is not full-blown animation and should not be sold as such.
@@ -273,7 +283,7 @@ See [agent](https://agent.models.nasdanika.org/) and [AI governance](https://ai.
 | Draw.io specifics | custom `<object>` properties loaded into diagram `properties` |
 | Reused, not redefined | presentation `Presentation`, `Slide`, `Shape`, `ConnectorShape`, text tree, masters, notes; diagram `DiagramElement` (`tags`, `properties`, `semanticElements`, `children` keyed by `id`), `Node` bounds and ports, `Layer`, `Connection`; nxcore identity, documentation, `uris`, `icon`, and markers |
 | Provided by the Java API, not the model | parsing and serialization, compression, PNG metadata, HTML embedding, page and element link resolution, URI handlers, layout, comparators |
-| In progress | the `Element` supertype with its derived `style` reference, and the `Style` / `NodeStyle` / `ConnectionStyle` hierarchy with its enumerations; `ConnectionPoint` extending diagram `Port` with pixel `dx`/`dy` for `exitX`/`exitY`/`entryX`/`entryY`; capability wiring so a `.drawio` URI resolves to a model in a resource set; migration of the site generator, the executable-diagram interpreter, and the ELK factory down onto the shared models; animation generators for the telemetry, accounting, and flow cases, and the Sprotty route for animation that outgrows the Draw.io viewer |
+| In progress | the `Element` supertype with its derived `style` reference, and the `Style` / `NodeStyle` / `ConnectionStyle` hierarchy with its enumerations; `ConnectionPoint` extending diagram `Port` with pixel `dx`/`dy` for `exitX`/`exitY`/`entryX`/`entryY`; capability wiring so a `.drawio` URI resolves to a model in a resource set; migration of the site generator, the executable-diagram interpreter, and the ELK factory down onto the shared models; the `animate` CLI command - under `nsd drawio` and behind a `drawio` cast under `nsd model` - with capability-resolved animation generators, PlantUML and Mermaid sequence-diagram sources first; animation generators for the telemetry, accounting, and flow cases, and the Sprotty route for animation that outgrows the Draw.io viewer |
 
 ## Relation to other Nasdanika work
 
